@@ -49,9 +49,30 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="WebTest1.webtest">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Include="DAS_LOADTEST_00_15.loadtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="DAS_LOADTEST_00_16.loadtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DAS_LOADTEST_SCRIPT_01_05v3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DAS_LOADTEST_SCRIPT_01_06v3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DAS_LOADTEST_SCRIPT_03_01v3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DAS_LOADTEST_SCRIPT_04_01v3.webtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ESFA.DAS.QA.LOADTEST.PROJECT.008.PLUGINS.PROD\ESFA.DAS.QA.LOADTEST.PROJECT.008.PLUGINS.PROD.csproj">
+      <Project>{e87ff1ce-45c4-4f7d-9537-1689597a1761}</Project>
+      <Name>ESFA.DAS.QA.LOADTEST.PROJECT.008.PLUGINS.PROD</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
