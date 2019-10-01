@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<LoadTest Name="DAS_LOADTEST_00_15" Description="" Owner="" storage="c:\repos\esfa.das.qa.loadtest.solution.001\esfa.das.qa.loadtest.project.002.prod\das_loadtest_00_15.loadtest" Priority="2147483647" Enabled="true" CssProjectStructure="" CssIteration="" DeploymentItemsEditable="" WorkItemIds="" TraceLevel="None" CurrentRunConfig="Run Settings1" Id="4b3bb6d5-9c9f-4935-8cab-16dd2541ff84" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+<LoadTest Name="DAS_LOADTEST_00_15" Description="" Owner="" storage="c:\repos\esfa.das.qa.loadtest.solution.002\webandloadtestproject1\das_loadtest_00_15.loadtest" Priority="2147483647" Enabled="true" CssProjectStructure="" CssIteration="" DeploymentItemsEditable="" WorkItemIds="" TraceLevel="None" CurrentRunConfig="Run Settings1" Id="4b3bb6d5-9c9f-4935-8cab-16dd2541ff84" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
   <Scenarios>
     <Scenario Name="Scenario1" DelayBetweenIterations="5" PercentNewUsers="100" IPSwitching="false" TestMixType="PercentageOfUsersRunning" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
       <ThinkProfile Value="0" Pattern="On" />
