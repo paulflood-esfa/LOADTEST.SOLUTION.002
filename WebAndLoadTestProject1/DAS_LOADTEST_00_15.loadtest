@@ -3,7 +3,7 @@
   <Scenarios>
     <Scenario Name="Scenario1" DelayBetweenIterations="5" PercentNewUsers="100" IPSwitching="false" TestMixType="PercentageOfUsersRunning" ApplyDistributionToPacingDelay="true" MaxTestIterations="0" DisableDuringWarmup="false" DelayStartTime="0" AllowedAgents="">
       <ThinkProfile Value="0" Pattern="On" />
-      <LoadProfile Pattern="Constant" InitialUsers="4" />
+      <LoadProfile Pattern="Step" InitialUsers="2" MaxUsers="500" StepUsers="3" StepDuration="3" StepRampTime="3" />
       <TestMix>
         <TestProfile Name="DAS_LOADTEST_SCRIPT_01_05v3" Path="das_loadtest_script_01_05v3.webtest" Id="2f85f6a2-a8e7-4c99-829d-1f0be969704d" Percentage="20" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
         <TestProfile Name="DAS_LOADTEST_SCRIPT_03_01v3" Path="das_loadtest_script_03_01v3.webtest" Id="a5a6eb60-4861-470b-b53a-2cee4f44eb69" Percentage="20" Type="Microsoft.VisualStudio.TestTools.WebStress.DeclarativeWebTestElement, Microsoft.VisualStudio.QualityTools.LoadTest, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
