@@ -1,0 +1,1344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="DAS_LOADTEST_SCRIPT_04_01v3" Id="52b6d013-1cb2-480c-b685-1b6ff3548a1a" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="WebTest7.3192048f-428d-4017-89e1-3acab2f90a6c.rec.webtestresult" ResultsLocale="">
+  <Items>
+    <Comment CommentText="SCRIPT STEP 01 - OPEN CREATE EMPLOYER ACCOUNT PAGE" />
+    <TransactionTimer Name="S04_01_T01_OPEN_CREATE_EMPLOYER_ACCOUNT_PAGE">
+      <Items>
+        <Request Method="GET" Guid="e2a0ade9-e650-496c-9ddd-c3f4db1eaf51" Version="1.1" Url="https://pp-eas.apprenticeships.education.gov.uk/" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 02 - CREATE EMPLOYER ACCOUNT - SELECT SIGN IN LINK" />
+    <TransactionTimer Name="S04_01_T02_CREATE_EMPLOYER_ACCOUNT_SELECT_SIGN_IN_LINK">
+      <Items>
+        <Request Method="GET" Guid="0b9ad8cb-c121-4366-a4f1-5bcdb005df8a" Version="1.1" Url="https://accounts.pp-eas.apprenticeships.education.gov.uk/service/signIn" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pp-login.apprenticeships.education.gov.uk/identity/employer/login?id=b3f243bfcbff784675f50f4bef963606&amp;returnUrl=https%3a%2f%2fpp-login.apprenticeships.education.gov.uk%2fidentity%2fconnect%2fauthorize%3fclient_id%3deasaccpp%26response_type%3dcode%26scope%3dopenid%2520profile%26redirect_uri%3dhttps%253A%252F%252Faccounts.pp-eas.apprenticeships.education.gov.uk%252Fservice%252FsignIn%26state%3d9H-x3akhHFOEYrE-kTfZOzaU6gSQoUoW6tgiI9f1ISCfMG7UwM9afd32bmbFFoMekAdDia8ENBDaQJcRbUVEHhZT9Uha7pe4nTnJlmLy5Cdw8anza3lbKZGdEJ6dzUzg7a3hjNgEX7aJiSxU76CjYRiKzvPnYA1DwTjIqfa7dbEqVSuzsRfQHaNlqs57QQT0%26nonce%3d39d608478250489dae7481bee06af351&amp;clientId=easaccpp" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://accounts.pp-eas.apprenticeships.education.gov.uk/service/index" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 03 - EMPLOYER ACCOUNT SIGN IN PAGE - SELECT SIGN IN BUTTON" />
+    <TransactionTimer Name="S04_01_T03_EMPLOYER_ACCOUNT_SIGN_IN_PAGE_SELECT_SIGN_IN_BUTTON">
+      <Items>
+        <Request Method="POST" Guid="75262192-79b9-40e5-94a1-63b55fff56c3" Version="1.1" Url="https://pp-login.apprenticeships.education.gov.uk/identity/employer/login" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/employer/login?id=06e41a0239708178179b743cc196c826&amp;returnUrl=https%3a%2f%2fpp-login.apprenticeships.education.gov.uk%2fidentity%2fconnect%2fauthorize%3fclient_id%3deaspp%26response_type%3dcode%26scope%3dopenid%2520profile%26redirect_uri%3dhttps%253A%252F%252Fpp-eas.apprenticeships.education.gov.uk%252Fservice%252FsignIn%26state%3dOheY0BSl-CiyLVI9W3kSEnZPOkZKwRZl84UTeFV3aydJqK9LHgHGeKZ-NCftl08AjON57z80-JbghYXI64hnYWRYF4KMeVv11DniLLHCHvDJhXYsP1hxITCZJBBf7CdE0KBU2C1R9zDggzcXC6zxUxm6x1s%26nonce%3d02f4045d6e814c6bb378fe098959d6e7&amp;clientId=easpp" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="id" Value="06e41a0239708178179b743cc196c826" RecordedValue="06e41a0239708178179b743cc196c826" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="returnUrl" Value="https%3a%2f%2fpp-login.apprenticeships.education.gov.uk%2fidentity%2fconnect%2fauthorize%3fclient_id%3deaspp%26response_type%3dcode%26scope%3dopenid%2520profile%26redirect_uri%3dhttps%253A%252F%252Fpp-eas.apprenticeships.education.gov.uk%252Fservice%252FsignIn%26state%3dOheY0BSl-CiyLVI9W3kSEnZPOkZKwRZl84UTeFV3aydJqK9LHgHGeKZ-NCftl08AjON57z80-JbghYXI64hnYWRYF4KMeVv11DniLLHCHvDJhXYsP1hxITCZJBBf7CdE0KBU2C1R9zDggzcXC6zxUxm6x1s%26nonce%3d02f4045d6e814c6bb378fe098959d6e7" RecordedValue="https%3a%2f%2f{{EnvironmentLogin}}%2fidentity%2fconnect%2fauthorize%3fclient_id%3deaspp%26response_type%3dcode%26scope%3dopenid%2520profile%26redirect_uri%3dhttps%253A%252F%252F{{Environment}}%252Fservice%252FsignIn%26state%3dOheY0BSl-CiyLVI9W3kSEnZPOkZKwRZl84UTeFV3aydJqK9LHgHGeKZ-NCftl08AjON57z80-JbghYXI64hnYWRYF4KMeVv11DniLLHCHvDJhXYsP1hxITCZJBBf7CdE0KBU2C1R9zDggzcXC6zxUxm6x1s%26nonce%3d02f4045d6e814c6bb378fe098959d6e7" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="clientId" Value="easpp" RecordedValue="easpp" CorrelationBinding="{{QueryStringParam82.clientId}}" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+          <FormPostHttpBody>
+            <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="LVUdcdmr-IwR1lBZeDgD4MCcp1OrUw_ffMUk_lbx5m_e_UgMBURPVPbvoE-9OaX1bazALB2_hIQCyutrN5FJdIHUwEzIqdQobaLZULdH96I1" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="EmailAddress" Value="{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_Email}}" RecordedValue="tf4.tl4@test.com" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="Password" Value="{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_Password}}" RecordedValue="Password1" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 04 - EMPLOYER ACCOUNT PAGE - SELECT APPRENTICES LINK" />
+    <TransactionTimer Name="S04_01_T04_EMPLOYER_ACCOUNT_PAGE_SELECT_APPRENTICES_LINK">
+      <Items>
+        <Request Method="GET" Guid="f0d3bf34-0ba7-46b3-a15c-15dc590783b9" Version="1.1" Url="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/home" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://accounts.pp-eas.apprenticeships.education.gov.uk/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/teams" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="CohortRef1" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value=".userID = '" />
+                <RuleParameter Name="EndsWith" Value="'" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="ExtractRandomMatch" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="SearchInHeaders" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 05 - APPRENTICES PAGE - SELECT ADD AN APPRENTICE LINK" />
+    <TransactionTimer Name="S04_01_T05_APPRENTICES_PAGE_SELECT_ADD_AN_APPRENTICE_LINK">
+      <Items>
+        <Request Method="GET" Guid="1788f04b-de42-47eb-af21-ad5771e08471" Version="1.1" Url="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/Inform" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/home?code=4347187a9dc272e637fdfbadbc651659&amp;state=12abbe9d642f4cef9d1151d582bdde9c" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 06 - ADD AN APPRENTICE PAGE - SELECT START NOW BUTTON" />
+    <TransactionTimer Name="S04_01_T06_ADD_AN_APPRENTICE_PAGE_SELECT_START_NOW_BUTTON">
+      <Items>
+        <Request Method="GET" Guid="06c413ee-1929-429d-b4d8-bb03f95664c5" Version="1.1" Url="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/transferConnection/create" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/Inform" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 07 - ADD TRAINING PROVIDER PAGE - INPUT UKPRN - SELECT CONTINUE BUTTON" />
+    <TransactionTimer Name="S04_01_T07_ADD_PROVIDER_PAGE_INPUT_UKPRN_SELECT_CONTINUE_BUTTON">
+      <Items>
+        <Request Method="POST" Guid="4df59551-040d-452f-8ba4-b8070a1d1691" Version="1.1" Url="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/provider/create" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/provider/create?LegalEntityCode={{$HIDDEN1.LegalEntityCode}}&amp;CohortRef={{$HIDDEN1.CohortRef}}" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="CohortRef2" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="value=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                <RuleParameter Name="Index" Value="6" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <CorrelationExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam8.Confirmation" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                <RuleParameter Name="Index" Value="1" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam9.HashedAccountId" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                <RuleParameter Name="Index" Value="3" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam10.LegalEntityCode" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                <RuleParameter Name="Index" Value="5" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam12.ProviderId" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                <RuleParameter Name="Index" Value="7" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam13.Confirmation" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="Confirmation-True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+          </CorrelationExtractionRules>
+          <FormPostHttpBody>
+            <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="c43k7ptBsptxAq7Zc_4m2MOIy2UNUDqVDijP4DvL4-5SdMxs_2z7Yz4FRehG8n4fHh4ooWkVx3V9thXLyRSfyap7_F83-UJ60fIScEEc3YOxAUVozHnpSjUST1ImMbgRO5lq_w2" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="ProviderId" Value="{{DataSource5.DAS_QA_LOADTEST_TEST_DATA_FILE_005#csv.ProviderId}}" RecordedValue="10005077" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="TransferConnectionCode" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="LegalEntityCode" Value="{{$HIDDEN1.LegalEntityCode}}" RecordedValue="00445790" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="CohortRef" Value="{{$HIDDEN1.CohortRef}}" RecordedValue="72293E72-A6BC-4249-90A7-6AB6CB066005" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 08 - CONFIRM TRAINING PROVIDER PAGE - SELECT YES - SELECT CONTINUE BUTTON" />
+    <TransactionTimer Name="S04_01_T08_CONFIRM_TRAINING_PROVIDER_PAGE_SELECT_CONTINUE_BUTTON">
+      <Items>
+        <Request Method="POST" Guid="3cf6c444-8507-4e79-9d71-62199e128fcf" Version="1.1" Url="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/confirmProvider/create" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/choosePath/create?legalEntityCode={{$HIDDEN1.LegalEntityCode}}&amp;providerId={{DataSource5.DAS_QA_LOADTEST_TEST_DATA_FILE_005#csv.ProviderId}}&amp;cohortRef={{$HIDDEN1.CohortRef}}" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/provider/create" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <CorrelationExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam15.SelectedRoute" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                <RuleParameter Name="Index" Value="1" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam17.LegalEntityCode" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                <RuleParameter Name="Index" Value="5" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam18.LegalEntityName" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                <RuleParameter Name="Index" Value="6" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam19.LegalEntityAddress" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                <RuleParameter Name="Index" Value="7" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam20.LegalEntitySource" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                <RuleParameter Name="Index" Value="8" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam21.AccountLegalEntityPublicHashedId" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                <RuleParameter Name="Index" Value="9" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam22.ProviderId" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                <RuleParameter Name="Index" Value="10" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam23.ProviderName" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                <RuleParameter Name="Index" Value="11" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam24.SelectedRoute" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="SelectedRoute-Employer" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+          </CorrelationExtractionRules>
+          <FormPostHttpBody>
+            <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="PmlyH3-9H8ItNMn2NKEAVvNNAWd2tJmMLnizRJhEe7BeJcBqQGfhUtDyljmzJDTHWc3-MrOKa0bHWROvLye7HCeG0CzELeDjxCv7QSWNnWWN22PGZQacD28OtSUTpva_-JzeOA2" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="Confirmation" Value="True" RecordedValue="True" CorrelationBinding="{{FormPostParam13.Confirmation}}" UrlEncode="True" />
+            <FormPostParameter Name="HashedAccountId" Value="{{$HIDDEN1.HashedAccountId}}" RecordedValue="MDJ87P" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="TransferConnectionCode" Value="{{$HIDDEN1.TransferConnectionCode}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="LegalEntityCode" Value="{{$HIDDEN1.LegalEntityCode}}" RecordedValue="00445790" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="CohortRef" Value="{{$HIDDEN1.CohortRef}}" RecordedValue="72293E72-A6BC-4249-90A7-6AB6CB066005" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="ProviderId" Value="{{DataSource5.DAS_QA_LOADTEST_TEST_DATA_FILE_005#csv.ProviderId}}" RecordedValue="10005077" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 09 - START ADDING APPRENTICES PAGE - SELECT I WILL ADD APPRENTICES - SELECT CONTINUE BUTTON" />
+    <TransactionTimer Name="S04_01_T09_ADDING_APPRENTICES_PAGE_SELECT_CONTINUE_BUTTON">
+      <Items>
+        <Request Method="POST" Guid="398f695b-3f46-41d8-962b-924c00a0576c" Version="1.1" Url="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/choosePath/create" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/VYGXBL/details" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/choosePath/create?legalEntityCode={{$HIDDEN1.LegalEntityCode}}&amp;providerId=10000291&amp;cohortRef={{$HIDDEN1.CohortRef}}" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="CohortRef3" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="cohortRef = '" />
+                <RuleParameter Name="EndsWith" Value="'" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="ExtractRandomMatch" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="SearchInHeaders" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <FormPostHttpBody>
+            <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="ptkTQrXZ5P630zTm3hN_ZFID0CtAedkj9UOYPd4kH6u439eK_w3ZAi_5YtMB-_pV3KRn2rFZjlxaf0H25R2qzHN0aqFUhWuSOqwiN9w2dvZDzXgkZB0by-H0d6YwuK8J0uO01A2" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="SelectedRoute" Value="employer" RecordedValue="employer" CorrelationBinding="{{FormPostParam24.SelectedRoute}}" UrlEncode="True" />
+            <FormPostParameter Name="CohortRef" Value="{{$HIDDEN1.CohortRef}}" RecordedValue="72293E72-A6BC-4249-90A7-6AB6CB066005" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="TransferConnectionCode" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="LegalEntityCode" Value="{{$HIDDEN1.LegalEntityCode}}" RecordedValue="00445790" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="LegalEntityName" Value="{{$HIDDEN1.LegalEntityName}}" RecordedValue="TESCO PLC" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="LegalEntityAddress" Value="{{$HIDDEN1.LegalEntityAddress}}" RecordedValue="Tesco House, Shire Park Kestrel Way, Welwyn Garden City, AL7 1GA" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="LegalEntitySource" Value="{{$HIDDEN1.LegalEntitySource}}" RecordedValue="1" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="AccountLegalEntityPublicHashedId" Value="{{$HIDDEN1.AccountLegalEntityPublicHashedId}}" RecordedValue="7WDWXK" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="ProviderId" Value="10000291" RecordedValue="10005077" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="ProviderName" Value="{{$HIDDEN1.ProviderName}}" RecordedValue="PETERBOROUGH REGIONAL COLLEGE" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 10 - REVIEW YOUR COHORT PAGE - SELECT  ADD APPRENTICE LINK" />
+    <TransactionTimer Name="S04_01_T10_REVIEW_YOUR_COHORT_PAGE_SELECT_ADD_APPRENTICE_LINK">
+      <Items>
+        <Request Method="GET" Guid="4327a5be-58de-4b25-94b1-a17cc70f3c6c" Version="1.1" Url="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/{{CohortRef3}}/apprenticeships/create" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/{{CohortRef3}}/details" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <CorrelationExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam2.TrainingCode" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; &gt;&#xD;&#xA;" />
+                <RuleParameter Name="Index" Value="7" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam25.TrainingCode" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; &gt;&#xD;&#xA;" />
+                <RuleParameter Name="Index" Value="7" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+          </CorrelationExtractionRules>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 15 - ADD APPRENTICE DETAILS PAGE - SELECT SAVE AND CONTINUE BUTTON" />
+    <TransactionTimer Name="S04_01_T15_ADD_APPRENTICE_DETAILS_PAGE_SELECT_CONTINUE_BUTTON">
+      <Items>
+        <Request Method="POST" Guid="461327a9-08a6-46a9-8338-fa77726e1cf4" Version="1.1" Url="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/{{CohortRef3}}/apprenticeships/create" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/{{CohortRef3}}/details" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/{{CohortRef3}}/apprenticeships/create" />
+          </Headers>
+          <FormPostHttpBody>
+            <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="ZRGw_996M00fitgXe8Ag0R0vSqyGCnDetDS6GWFtf9pxkAgt5eSvoeV0fGuwedrBx0ccaq5pM0_39vjRIE2uRnu5rR9VXIHJObtS-i0Z6iOwae7DyS7VvLjX5qYpqX3PP76T5A2" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="FirstName" Value="{{FirstName}}" RecordedValue="FirstApp1" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="LastName" Value="{{LastName}}" RecordedValue="LastApp1" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="DateOfBirth.Day" Value="01" RecordedValue="01" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="DateOfBirth.Month" Value="01" RecordedValue="01" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="DateOfBirth.Year" Value="1980" RecordedValue="1980" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="TrainingCode" Value="274" RecordedValue="274" CorrelationBinding="{{FormPostParam25.TrainingCode}}" UrlEncode="True" />
+            <FormPostParameter Name="StartDate.Month" Value="04" RecordedValue="08" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="StartDate.Year" Value="2019" RecordedValue="2018" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="EndDate.Month" Value="04" RecordedValue="08" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="EndDate.Year" Value="2020" RecordedValue="2019" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="Cost" Value="1200" RecordedValue="1200" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="EmployerRef" Value="Perf Test" RecordedValue="Perf Test" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="ULN" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="AgreementStatus" Value="{{$HIDDEN1.AgreementStatus}}" RecordedValue="NotAgreed" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="ProviderRef" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="IsPaidForByTransfer" Value="{{$HIDDEN1.IsPaidForByTransfer}}" RecordedValue="False" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="IsInTransferRejectedCohort" Value="{{$HIDDEN1.IsInTransferRejectedCohort}}" RecordedValue="False" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 16 - REVIEW YOUR COHORT PAGE - SELECT SAVE AND CONTINUE BUTTON" />
+    <TransactionTimer Name="S04_01_T16_REVIEW_COHORT_PAGE_SELECT_SAVE_AND_CONTINUE_BUTTON">
+      <Items>
+        <Request Method="GET" Guid="7f40408f-727d-4950-8520-733eebef6753" Version="1.1" Url="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/{{CohortRef3}}/finished" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/{{CohortRef3}}/details" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <CorrelationExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam1.SaveStatus" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="SaveStatus-ApproveAndSend" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam26.SaveStatus" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="SaveStatus-ApproveAndSend" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+          </CorrelationExtractionRules>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 17 - CHOOSE AN OPTION PAGE - SELECT SENT TO TRAINING PROVIDER TO REVIEW OR ADD DETAILS - SELECT CONTINUE BUTTON" />
+    <TransactionTimer Name="S04_01_T17_OPTION_PAGE_SEND_TO_PROVIDER_SELECT_CONTINUE_BUTTON">
+      <Items>
+        <Request Method="POST" Guid="4aa391c1-ae9b-4b4b-8690-aac5916f2a1d" Version="1.1" Url="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/{{CohortRef3}}/finished" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/{{CohortRef3}}/submit?SaveStatus=ApproveAndSend" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/{{CohortRef3}}/finished" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <CorrelationExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam28.HashedCommitmentId" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                <RuleParameter Name="Index" Value="1" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam29.LegalEntitySource" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="ght=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; wid" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam30.ProviderName" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                <RuleParameter Name="Index" Value="9" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam31.SaveStatus" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                <RuleParameter Name="Index" Value="11" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+          </CorrelationExtractionRules>
+          <FormPostHttpBody>
+            <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="AVfOGCtloDiN_VHCEUJSmFfnQAOCwxcDHkhtgZHp_Lx1efCxkla_48nnct3QFAWRyXnNP-sW-z8SNp_VDhcgr_vZu5x62BIdHHUgPIMvehPxHoAVliH4SUZXybku9V3nMoX6hQ2" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="SaveStatus" Value="AmendAndSend" RecordedValue="ApproveAndSend" CorrelationBinding="{{FormPostParam26.SaveStatus}}" UrlEncode="True" />
+            <FormPostParameter Name="HashedCommitmentId" Value="{{$HIDDEN1.HashedCommitmentId}}" RecordedValue="VYGXBL" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="HasApprenticeships" Value="{{$HIDDEN1.HasApprenticeships}}" RecordedValue="True" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="InvalidApprenticeshipCount" Value="{{$HIDDEN1.InvalidApprenticeshipCount}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="NotReadyForApproval" Value="{{$HIDDEN1.NotReadyForApproval}}" RecordedValue="False" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 18 - MESSAGE FOR PROVIDER PAGE - SELECT SEND BUTTON" />
+    <TransactionTimer Name="S04_01_T18_MESSAGE_FOR_PROVIDER_PAGE_SELECT_SEND_BUTTON">
+      <Items>
+        <Request Method="POST" Guid="6f52ce3e-9ce9-4b1f-95ae-6a32dfb367f6" Version="1.1" Url="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/{{CohortRef3}}/submit" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/{{CohortRef3}}/Acknowledgement?SaveStatus=ApproveAndSend" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/{{CohortRef3}}/submit?SaveStatus=ApproveAndSend" />
+          </Headers>
+          <FormPostHttpBody>
+            <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="pEyA6XOY8kktpaZC8rTVXhKC4wp2hIoj5NS_qujY9BNG2-Nvi2JCC2bqIsv9bfZe0O3nA3aKDaBLiF8097kutm-Epu_0mIP0clBiATRrY5_gFf7tEoLo0yUkUjurk58CPObYNg2" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="Message" Value="{{LastName}}" RecordedValue="Perf Test" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="HashedCommitmentId" Value="{{$HIDDEN1.HashedCommitmentId}}" RecordedValue="VYGXBL" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="TransferConnectionCode" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="LegalEntityCode" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="LegalEntityName" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="LegalEntityAddress" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="LegalEntitySource" Value="{{$HIDDEN1.LegalEntitySource}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="AccountLegalEntityPublicHashedId" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="ProviderId" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="ProviderName" Value="{{$HIDDEN1.ProviderName}}" RecordedValue="PETERBOROUGH REGIONAL COLLEGE" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="CohortRef" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="SaveStatus" Value="{{$HIDDEN1.SaveStatus}}" RecordedValue="ApproveAndSend" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 19 - COHORT APPROVED PAGE - SELECT HOME LINK" />
+    <TransactionTimer Name="S04_01_T19_COHORT_APPROVED_PAGE_SELECT_HOME_LINK">
+      <Items>
+        <Request Method="GET" Guid="223666c7-34c2-4d71-915f-d89ec44e5c0e" Version="1.1" Url="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/home" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/{{CohortRef3}}/Acknowledgement?SaveStatus=ApproveAndSend" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 20 - EMPLOYER ACCOUNT PAGE - SELECT SIGN OUT LINK" />
+    <TransactionTimer Name="S04_01_T20_EMPLOYER_ACCOUNT_PAGE_SELECT_SIGN_OUT_LINK">
+      <Items>
+        <Request Method="GET" Guid="f99e10d9-a9c1-4074-88a8-d598c2be8c6b" Version="1.1" Url="https://accounts.pp-eas.apprenticeships.education.gov.uk/service/signOut" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://accounts.pp-eas.apprenticeships.education.gov.uk/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/teams?" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="63302b55-abc1-4285-bbcc-6c4adf61be88" Version="1.1" Url="https://pp-login.apprenticeships.education.gov.uk/bundles/screen" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="v" Value="sVXB6jzilt1nVSNlS57LnOPveP7GgPMMp1eb2WI92gc1" RecordedValue="sVXB6jzilt1nVSNlS57LnOPveP7GgPMMp1eb2WI92gc1" CorrelationBinding="{{QueryStringParam27.v}}" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="4b6b604e-df78-4017-9a69-40e1c98be1ef" Version="1.1" Url="https://pp-login.apprenticeships.education.gov.uk/bundles/sfajs" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="v" Value="Jbj2Y_xO24wPC3zyuRgONPebgpj-X7hbkl5wrtfjXlE1" RecordedValue="Jbj2Y_xO24wPC3zyuRgONPebgpj-X7hbkl5wrtfjXlE1" CorrelationBinding="{{QueryStringParam33.v}}" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="97835a3a-eeca-46f5-b409-46a6c8d8639b" Version="1.1" Url="https://accounts.pp-eas.apprenticeships.education.gov.uk/service/signoutcleanup" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="dc470720-1483-4763-8e29-03e798411be6" Version="1.1" Url="https://forecasting.pp-eas.apprenticeships.education.gov.uk/" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="f042444d-cfb6-4e36-b0f3-e0f4e7454fdd" Version="1.1" Url="https://permissions.pp-eas.apprenticeships.education.gov.uk/signoutcleanup" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 21 - LOGGED OUT PAGE - SELECT CONTINUE BUTTON" />
+    <TransactionTimer Name="S04_01_T21_LOGGED_OUT_PAGE_SELECT_CONTINUE_BUTTON">
+      <Items>
+        <Request Method="GET" Guid="f695d3a0-55d8-409f-b42e-05c990ab0531" Version="1.1" Url="https://pp-login.apprenticeships.education.gov.uk/bundles/sfajs" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/logout?id=63da6b8890fd1b79e37d5f76704cb617" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="v" Value="Jbj2Y_xO24wPC3zyuRgONPebgpj-X7hbkl5wrtfjXlE1" RecordedValue="Jbj2Y_xO24wPC3zyuRgONPebgpj-X7hbkl5wrtfjXlE1" CorrelationBinding="{{QueryStringParam46.v}}" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="1662315b-4939-4743-9f14-a28f9303a1ff" Version="1.1" Url="https://forecasting.pp-eas.apprenticeships.education.gov.uk/" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/logout?id=ebe729b83705574ce004b1a2550b9170" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="2121041d-e75a-43c4-9fba-9d428065206b" Version="1.1" Url="https://permissions.pp-eas.apprenticeships.education.gov.uk/signoutcleanup" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/logout?id=ebe729b83705574ce004b1a2550b9170" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="89855a29-9e88-449a-90ab-234aebc49671" Version="1.1" Url="https://accounts.pp-eas.apprenticeships.education.gov.uk/service/signoutcleanup" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/logout?id=cdb90bf7577192dac73d82d6df27c722" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 22 - REDIRECTED TO CREATE EMPLOYER ACCOUNT PAGE" />
+    <TransactionTimer Name="S04_01_T22_REDIRECTED_TO_CREATE_EMPLOYER_ACCOUNT_PAGE">
+      <Items>
+        <Request Method="GET" Guid="e74e1416-d730-4ae9-a084-5d8e9411261f" Version="1.1" Url="https://accounts.pp-eas.apprenticeships.education.gov.uk/service/index" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 23 - OPEN TRAINING PROVIDER ACCOUNT PAGE" />
+    <TransactionTimer Name="S04_01_T23_OPEN_TRAINING_PROVIDER_ACCOUNT_PAGE">
+      <Items>
+        <Request Method="GET" Guid="bde2d6ea-4de8-42b8-a085-0584de2caf87" Version="1.1" Url="https://pp-pas.apprenticeships.education.gov.uk/" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 24 - TRAINING PROVIDER ACCOUNT PUBLIC LANDING PAGE- SELECT START NOW BUTTON" />
+    <TransactionTimer Name="S04_01_T24_PROVIDER_PUBLIC_LANDING_PAGE_SELECT_START_BUTTON">
+      <Items>
+        <Request Method="GET" Guid="a5710d65-2053-4418-bd7f-f3643da21e8c" Version="1.1" Url="https://pp-pas.apprenticeships.education.gov.uk/signin" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pplogon.fasst.org.uk/Login/samlIdp?SAMLRequest=fVLRSsMwFP2VkvcmzbZaG7rC2BAKU0TFB99imnZhaRJz06l%2fb9r6IsIgT4dz7jnn3lTAB%2b3Ybgwn8yQ%2fRgkhaQ5bpNp0c9tleUGLtOze1%2bmm3KzTcpXLVBS0pDkVpRAlSl6lB2XNFq1whpIGYJSNgcBNiFBGyzSL7%2baFZmyVsfwWFwV9Q8kh%2bijDw6w8heCAEeKctr01uOMAAVvf4%2fFMjrZXhkwpm9ahZG8NyGn26A2zHBQwwwcJLAj2vLs%2fshiDiYXERgNOCtUp2aLka9AG2Fz3utp5G6ywGtXVXMcv0uuiGFn6qQ6qpzqxDW87wM7LOK7FcFZaQzeaVpkeR%2bpFCYl7e5kqTkzyiwEJfoRQkcW6rpb7PETD5vBotRLfyZ31A7%2byAorpjMQbdjP17yJ2WtvPvZc8yC2KbhIlpK7I%2f49Q%2fwA%3d&amp;RelayState=99b2ce24-b2de-4ad8-ae5c-ce10c292254b" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-pas.apprenticeships.education.gov.uk/" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="b1eff6e9-3193-493a-8abc-08f7f4e2ea85" Version="1.1" Url="https://pplogon.fasst.org.uk/static/sfa/languages/lang-en.json" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Accept" Value="application/json, text/plain, */*" />
+            <Header Name="Referer" Value="https://pplogon.fasst.org.uk/Login/samlIdp?SAMLRequest=fVLRSsMwFP2VkvcmzbZaG7rC2BAKU0TFB99imnZhaRJz06l%2Fb9r6IsIgT4dz7jnn3lTAB%2B3Ybgwn8yQ%2FRgkhaQ5bpNp0c9tleUGLtOze1%2Bmm3KzTcpXLVBS0pDkVpRAlSl6lB2XNFq1whpIGYJSNgcBNiFBGyzSL7%2BaFZmyVsfwWFwV9Q8kh%2BijDw6w8heCAEeKctr01uOMAAVvf4%2FFMjrZXhkwpm9ahZG8NyGn26A2zHBQwwwcJLAj2vLs%2FshiDiYXERgNOCtUp2aLka9AG2Fz3utp5G6ywGtXVXMcv0uuiGFn6qQ6qpzqxDW87wM7LOK7FcFZaQzeaVpkeR%2BpFCYl7e5kqTkzyiwEJfoRQkcW6rpb7PETD5vBotRLfyZ31A7%2ByAorpjMQbdjP17yJ2WtvPvZc8yC2KbhIlpK7I%2F49Q%2FwA%3D&amp;RelayState=99b2ce24-b2de-4ad8-ae5c-ce10c292254b" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="729284d1-2356-409f-ad76-670f5665f2cb" Version="1.1" Url="https://pplogon.fasst.org.uk/static/sfa/partials/skip-to-content-link.html" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Accept" Value="application/json, text/plain, */*" />
+            <Header Name="Referer" Value="https://pplogon.fasst.org.uk/Login/samlIdp?SAMLRequest=fVLRSsMwFP2VkvcmzbZaG7rC2BAKU0TFB99imnZhaRJz06l%2Fb9r6IsIgT4dz7jnn3lTAB%2B3Ybgwn8yQ%2FRgkhaQ5bpNp0c9tleUGLtOze1%2Bmm3KzTcpXLVBS0pDkVpRAlSl6lB2XNFq1whpIGYJSNgcBNiFBGyzSL7%2BaFZmyVsfwWFwV9Q8kh%2BijDw6w8heCAEeKctr01uOMAAVvf4%2FFMjrZXhkwpm9ahZG8NyGn26A2zHBQwwwcJLAj2vLs%2FshiDiYXERgNOCtUp2aLka9AG2Fz3utp5G6ywGtXVXMcv0uuiGFn6qQ6qpzqxDW87wM7LOK7FcFZaQzeaVpkeR%2BpFCYl7e5kqTkzyiwEJfoRQkcW6rpb7PETD5vBotRLfyZ31A7%2ByAorpjMQbdjP17yJ2WtvPvZc8yC2KbhIlpK7I%2F49Q%2FwA%3D&amp;RelayState=99b2ce24-b2de-4ad8-ae5c-ce10c292254b" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="b975ea59-8ceb-4c44-870b-d0e995fccf88" Version="1.1" Url="https://pplogon.fasst.org.uk/static/sfa/apps/sfa/partials/login.html" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Accept" Value="application/json, text/plain, */*" />
+            <Header Name="Referer" Value="https://pplogon.fasst.org.uk/Login/samlIdp?SAMLRequest=fVLRSsMwFP2VkvcmzbZaG7rC2BAKU0TFB99imnZhaRJz06l%2Fb9r6IsIgT4dz7jnn3lTAB%2B3Ybgwn8yQ%2FRgkhaQ5bpNp0c9tleUGLtOze1%2Bmm3KzTcpXLVBS0pDkVpRAlSl6lB2XNFq1whpIGYJSNgcBNiFBGyzSL7%2BaFZmyVsfwWFwV9Q8kh%2BijDw6w8heCAEeKctr01uOMAAVvf4%2FFMjrZXhkwpm9ahZG8NyGn26A2zHBQwwwcJLAj2vLs%2FshiDiYXERgNOCtUp2aLka9AG2Fz3utp5G6ywGtXVXMcv0uuiGFn6qQ6qpzqxDW87wM7LOK7FcFZaQzeaVpkeR%2BpFCYl7e5kqTkzyiwEJfoRQkcW6rpb7PETD5vBotRLfyZ31A7%2ByAorpjMQbdjP17yJ2WtvPvZc8yC2KbhIlpK7I%2F49Q%2FwA%3D&amp;RelayState=99b2ce24-b2de-4ad8-ae5c-ce10c292254b" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="eeda0d04-ccc3-41b7-9d1b-4ed923278068" Version="1.1" Url="https://pplogon.fasst.org.uk/static/sfa/apps/sfa/partials/sfa-navbar.html" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Accept" Value="application/json, text/plain, */*" />
+            <Header Name="Referer" Value="https://pplogon.fasst.org.uk/Login/samlIdp?SAMLRequest=fVLRSsMwFP2VkvcmzbZaG7rC2BAKU0TFB99imnZhaRJz06l%2Fb9r6IsIgT4dz7jnn3lTAB%2B3Ybgwn8yQ%2FRgkhaQ5bpNp0c9tleUGLtOze1%2Bmm3KzTcpXLVBS0pDkVpRAlSl6lB2XNFq1whpIGYJSNgcBNiFBGyzSL7%2BaFZmyVsfwWFwV9Q8kh%2BijDw6w8heCAEeKctr01uOMAAVvf4%2FFMjrZXhkwpm9ahZG8NyGn26A2zHBQwwwcJLAj2vLs%2FshiDiYXERgNOCtUp2aLka9AG2Fz3utp5G6ywGtXVXMcv0uuiGFn6qQ6qpzqxDW87wM7LOK7FcFZaQzeaVpkeR%2BpFCYl7e5kqTkzyiwEJfoRQkcW6rpb7PETD5vBotRLfyZ31A7%2ByAorpjMQbdjP17yJ2WtvPvZc8yC2KbhIlpK7I%2F49Q%2FwA%3D&amp;RelayState=99b2ce24-b2de-4ad8-ae5c-ce10c292254b" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="711a499c-f62e-46ed-bead-e39ca6a28bf0" Version="1.1" Url="https://pplogon.fasst.org.uk/static/sfa/partials/loading-spinner.html" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Accept" Value="application/json, text/plain, */*" />
+            <Header Name="Referer" Value="https://pplogon.fasst.org.uk/Login/samlIdp?SAMLRequest=fVLRSsMwFP2VkvcmzbZaG7rC2BAKU0TFB99imnZhaRJz06l%2Fb9r6IsIgT4dz7jnn3lTAB%2B3Ybgwn8yQ%2FRgkhaQ5bpNp0c9tleUGLtOze1%2Bmm3KzTcpXLVBS0pDkVpRAlSl6lB2XNFq1whpIGYJSNgcBNiFBGyzSL7%2BaFZmyVsfwWFwV9Q8kh%2BijDw6w8heCAEeKctr01uOMAAVvf4%2FFMjrZXhkwpm9ahZG8NyGn26A2zHBQwwwcJLAj2vLs%2FshiDiYXERgNOCtUp2aLka9AG2Fz3utp5G6ywGtXVXMcv0uuiGFn6qQ6qpzqxDW87wM7LOK7FcFZaQzeaVpkeR%2BpFCYl7e5kqTkzyiwEJfoRQkcW6rpb7PETD5vBotRLfyZ31A7%2ByAorpjMQbdjP17yJ2WtvPvZc8yC2KbhIlpK7I%2F49Q%2FwA%3D&amp;RelayState=99b2ce24-b2de-4ad8-ae5c-ce10c292254b" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="bd61d25d-1331-4a16-8475-d89ca2d53ef4" Version="1.1" Url="https://pplogon.fasst.org.uk/static/sfa/apps/sfa/partials/sfa-error-message.html" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Accept" Value="application/json, text/plain, */*" />
+            <Header Name="Referer" Value="https://pplogon.fasst.org.uk/Login/samlIdp?SAMLRequest=fVLRSsMwFP2VkvcmzbZaG7rC2BAKU0TFB99imnZhaRJz06l%2Fb9r6IsIgT4dz7jnn3lTAB%2B3Ybgwn8yQ%2FRgkhaQ5bpNp0c9tleUGLtOze1%2Bmm3KzTcpXLVBS0pDkVpRAlSl6lB2XNFq1whpIGYJSNgcBNiFBGyzSL7%2BaFZmyVsfwWFwV9Q8kh%2BijDw6w8heCAEeKctr01uOMAAVvf4%2FFMjrZXhkwpm9ahZG8NyGn26A2zHBQwwwcJLAj2vLs%2FshiDiYXERgNOCtUp2aLka9AG2Fz3utp5G6ywGtXVXMcv0uuiGFn6qQ6qpzqxDW87wM7LOK7FcFZaQzeaVpkeR%2BpFCYl7e5kqTkzyiwEJfoRQkcW6rpb7PETD5vBotRLfyZ31A7%2ByAorpjMQbdjP17yJ2WtvPvZc8yC2KbhIlpK7I%2F49Q%2FwA%3D&amp;RelayState=99b2ce24-b2de-4ad8-ae5c-ce10c292254b" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="b48e0d14-bda8-4198-b3b6-8cc3bfb4b91f" Version="1.1" Url="https://pplogon.fasst.org.uk/static/sfa/apps/sfa/partials/sfa-footer.html" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Accept" Value="application/json, text/plain, */*" />
+            <Header Name="Referer" Value="https://pplogon.fasst.org.uk/Login/samlIdp?SAMLRequest=fVLRSsMwFP2VkvcmzbZaG7rC2BAKU0TFB99imnZhaRJz06l%2Fb9r6IsIgT4dz7jnn3lTAB%2B3Ybgwn8yQ%2FRgkhaQ5bpNp0c9tleUGLtOze1%2Bmm3KzTcpXLVBS0pDkVpRAlSl6lB2XNFq1whpIGYJSNgcBNiFBGyzSL7%2BaFZmyVsfwWFwV9Q8kh%2BijDw6w8heCAEeKctr01uOMAAVvf4%2FFMjrZXhkwpm9ahZG8NyGn26A2zHBQwwwcJLAj2vLs%2FshiDiYXERgNOCtUp2aLka9AG2Fz3utp5G6ywGtXVXMcv0uuiGFn6qQ6qpzqxDW87wM7LOK7FcFZaQzeaVpkeR%2BpFCYl7e5kqTkzyiwEJfoRQkcW6rpb7PETD5vBotRLfyZ31A7%2ByAorpjMQbdjP17yJ2WtvPvZc8yC2KbhIlpK7I%2F49Q%2FwA%3D&amp;RelayState=99b2ce24-b2de-4ad8-ae5c-ce10c292254b" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="2e5e8dd0-8995-4301-955a-e4582d1dfdf7" Version="1.1" Url="https://pplogon.fasst.org.uk/static/sfa/fonts/SourceSansPro-Light.woff" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pplogon.fasst.org.uk/Login/samlIdp?SAMLRequest=fVLRSsMwFP2VkvcmzbZaG7rC2BAKU0TFB99imnZhaRJz06l%2Fb9r6IsIgT4dz7jnn3lTAB%2B3Ybgwn8yQ%2FRgkhaQ5bpNp0c9tleUGLtOze1%2Bmm3KzTcpXLVBS0pDkVpRAlSl6lB2XNFq1whpIGYJSNgcBNiFBGyzSL7%2BaFZmyVsfwWFwV9Q8kh%2BijDw6w8heCAEeKctr01uOMAAVvf4%2FFMjrZXhkwpm9ahZG8NyGn26A2zHBQwwwcJLAj2vLs%2FshiDiYXERgNOCtUp2aLka9AG2Fz3utp5G6ywGtXVXMcv0uuiGFn6qQ6qpzqxDW87wM7LOK7FcFZaQzeaVpkeR%2BpFCYl7e5kqTkzyiwEJfoRQkcW6rpb7PETD5vBotRLfyZ31A7%2ByAorpjMQbdjP17yJ2WtvPvZc8yC2KbhIlpK7I%2F49Q%2FwA%3D&amp;RelayState=99b2ce24-b2de-4ad8-ae5c-ce10c292254b" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="07fe55d2-e00e-4da9-ab91-74b9e91b0b6a" Version="1.1" Url="https://pplogon.fasst.org.uk/static/sfa/fonts/Piricons.woff" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pplogon.fasst.org.uk/Login/samlIdp?SAMLRequest=fVLRSsMwFP2VkvcmzbZaG7rC2BAKU0TFB99imnZhaRJz06l%2Fb9r6IsIgT4dz7jnn3lTAB%2B3Ybgwn8yQ%2FRgkhaQ5bpNp0c9tleUGLtOze1%2Bmm3KzTcpXLVBS0pDkVpRAlSl6lB2XNFq1whpIGYJSNgcBNiFBGyzSL7%2BaFZmyVsfwWFwV9Q8kh%2BijDw6w8heCAEeKctr01uOMAAVvf4%2FFMjrZXhkwpm9ahZG8NyGn26A2zHBQwwwcJLAj2vLs%2FshiDiYXERgNOCtUp2aLka9AG2Fz3utp5G6ywGtXVXMcv0uuiGFn6qQ6qpzqxDW87wM7LOK7FcFZaQzeaVpkeR%2BpFCYl7e5kqTkzyiwEJfoRQkcW6rpb7PETD5vBotRLfyZ31A7%2ByAorpjMQbdjP17yJ2WtvPvZc8yC2KbhIlpK7I%2F49Q%2FwA%3D&amp;RelayState=99b2ce24-b2de-4ad8-ae5c-ce10c292254b" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 25 - TRAINING PROVIDER SIGN IN PAGE - SELECT SIGN IN BUTTON" />
+    <TransactionTimer Name="S04_01_T25_PROVIDER_SIGN_IN_PAGE_SELECT_SIGN_IN_BUTTON">
+      <Items>
+        <Request Method="GET" Guid="f39e4e50-12ed-489c-9307-9885e5a04a64" Version="1.1" Url="https://pplogon.fasst.org.uk/Login/rest/appl/sfa/wflow/checkuser" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Accept" Value="application/json, text/plain, */*" />
+            <Header Name="Referer" Value="https://pplogon.fasst.org.uk/Login/samlIdp?SAMLRequest=fVLRSsMwFP2VkvcmzbZaG7rC2BAKU0TFB99imnZhaRJz06l%2Fb9r6IsIgT4dz7jnn3lTAB%2B3Ybgwn8yQ%2FRgkhaQ5bpNp0c9tleUGLtOze1%2Bmm3KzTcpXLVBS0pDkVpRAlSl6lB2XNFq1whpIGYJSNgcBNiFBGyzSL7%2BaFZmyVsfwWFwV9Q8kh%2BijDw6w8heCAEeKctr01uOMAAVvf4%2FFMjrZXhkwpm9ahZG8NyGn26A2zHBQwwwcJLAj2vLs%2FshiDiYXERgNOCtUp2aLka9AG2Fz3utp5G6ywGtXVXMcv0uuiGFn6qQ6qpzqxDW87wM7LOK7FcFZaQzeaVpkeR%2BpFCYl7e5kqTkzyiwEJfoRQkcW6rpb7PETD5vBotRLfyZ31A7%2ByAorpjMQbdjP17yJ2WtvPvZc8yC2KbhIlpK7I%2F49Q%2FwA%3D&amp;RelayState=99b2ce24-b2de-4ad8-ae5c-ce10c292254b" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="RelayState1" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="State&quot;:&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot;" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <QueryStringParameters>
+            <QueryStringParameter Name="username" Value="{{DataSource5.DAS_QA_LOADTEST_TEST_DATA_FILE_005#csv.Provider_Username}}" RecordedValue="ISP-10000291s" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="POST" Guid="65061842-1f4c-4b23-9e59-bf75827332a6" Version="1.1" Url="https://pp-pas.apprenticeships.education.gov.uk/" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pp-pas.apprenticeships.education.gov.uk/account" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://adfs.preprod.skillsfunding.service.gov.uk/adfs/ls/" />
+          </Headers>
+          <FormPostHttpBody>
+            <FormPostParameter Name="wa" Value="wsignin1.0" RecordedValue="wsignin1.0" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="wresult" Value="{{wres}}" RecordedValue="&lt;t:RequestSecurityTokenResponse xmlns:t=&quot;http://schemas.xmlsoap.org/ws/2005/02/trust&quot;&gt;&lt;t:Lifetime&gt;&lt;wsu:Created xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;2019-09-06T10:21:32.841Z&lt;/wsu:Created&gt;&lt;wsu:Expires xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;2019-09-06T18:21:32.841Z&lt;/wsu:Expires&gt;&lt;/t:Lifetime&gt;&lt;wsp:AppliesTo xmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2004/09/policy&quot;&gt;&lt;wsa:EndpointReference xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address&gt;https://pp-pas.apprenticeships.education.gov.uk&lt;/wsa:Address&gt;&lt;/wsa:EndpointReference&gt;&lt;/wsp:AppliesTo&gt;&lt;t:RequestedSecurityToken&gt;&lt;saml:Assertion MajorVersion=&quot;1&quot; MinorVersion=&quot;1&quot; AssertionID=&quot;_f3a64618-fff3-423b-af1f-0fa58d47c696&quot; Issuer=&quot;http://adfs.preprod.skillsfunding.service.gov.uk/adfs/services/trust&quot; IssueInstant=&quot;2019-09-06T10:21:32.841Z&quot; xmlns:saml=&quot;urn:oasis:names:tc:SAML:1.0:assertion&quot;&gt;&lt;saml:Conditions NotBefore=&quot;2019-09-06T10:21:32.841Z&quot; NotOnOrAfter=&quot;2019-09-06T18:21:32.841Z&quot;&gt;&lt;saml:AudienceRestrictionCondition&gt;&lt;saml:Audience&gt;https://pp-pas.apprenticeships.education.gov.uk&lt;/saml:Audience&gt;&lt;/saml:AudienceRestrictionCondition&gt;&lt;/saml:Conditions&gt;&lt;saml:AttributeStatement&gt;&lt;saml:Subject&gt;&lt;saml:SubjectConfirmation&gt;&lt;saml:ConfirmationMethod&gt;urn:oasis:names:tc:SAML:1.0:cm:bearer&lt;/saml:ConfirmationMethod&gt;&lt;/saml:SubjectConfirmation&gt;&lt;/saml:Subject&gt;&lt;saml:Attribute AttributeName=&quot;upn&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/ws/2005/05/identity/claims&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;ISP-10000291s&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;ukprn&quot; AttributeNamespace=&quot;http://schemas.portal.com&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;10000291&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;service&quot; AttributeNamespace=&quot;http://schemas.portal.com&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;DAA&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;displayname&quot; AttributeNamespace=&quot;http://schemas.portal.com&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;SFSTEST 10000291&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;name&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/ws/2005/05/identity/claims&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;SFSTEST 10000291&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;mail&quot; AttributeNamespace=&quot;http://schemas.portal.com&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;oattestuser+10000291@gmail.com&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;/saml:AttributeStatement&gt;&lt;saml:AuthenticationStatement AuthenticationMethod=&quot;urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport&quot; AuthenticationInstant=&quot;2019-09-06T10:21:29.511Z&quot;&gt;&lt;saml:Subject&gt;&lt;saml:SubjectConfirmation&gt;&lt;saml:ConfirmationMethod&gt;urn:oasis:names:tc:SAML:1.0:cm:bearer&lt;/saml:ConfirmationMethod&gt;&lt;/saml:SubjectConfirmation&gt;&lt;/saml:Subject&gt;&lt;/saml:AuthenticationStatement&gt;&lt;ds:Signature xmlns:ds=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;&lt;ds:SignedInfo&gt;&lt;ds:CanonicalizationMethod Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot; /&gt;&lt;ds:SignatureMethod Algorithm=&quot;http://www.w3.org/2001/04/xmldsig-more#rsa-sha256&quot; /&gt;&lt;ds:Reference URI=&quot;#_f3a64618-fff3-423b-af1f-0fa58d47c696&quot;&gt;&lt;ds:Transforms&gt;&lt;ds:Transform Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#enveloped-signature&quot; /&gt;&lt;ds:Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot; /&gt;&lt;/ds:Transforms&gt;&lt;ds:DigestMethod Algorithm=&quot;http://www.w3.org/2001/04/xmlenc#sha256&quot; /&gt;&lt;ds:DigestValue&gt;mSeVFXawbT9Vok0+VFE4fsHoH6U0vITG7eezJCzfnnw=&lt;/ds:DigestValue&gt;&lt;/ds:Reference&gt;&lt;/ds:SignedInfo&gt;&lt;ds:SignatureValue&gt;YK0lzHxoNoIW8PPrP6vMmwlndMOkjNz+Mdv1a3W1uCte98RRHEAQbH2UTeqTfapwfzWpnf/Z4EdyvENBrvQvSw/Iba+mRwdVjrBc4TjUvOo+z8jbvj9ErbcBnf8z9S+wE7uSb0NF/DCWeVDahYm8yy/rF11kCmHjduQfu6Uc75WBz8TWQ7Bg9vkIX9Zbr3QrsT1GVlc8sWBcjgBlighzQ3ewL9m946FYSd1kiF0CVRiyxGoaBuSxCmZ+4N3GLlAk1gZI2UbcWpPs+jb96kER3FFovg5zRBCbdRo0Orl8rW170SYvv4sczaWOSs6u7wBYCP5F5Wtk2mOrsGqUHV7uKQ==&lt;/ds:SignatureValue&gt;&lt;KeyInfo xmlns=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;&lt;X509Data&gt;&lt;X509Certificate&gt;MIIDDjCCAfagAwIBAgIQVu3rHgUAyaNM353xrulvYDANBgkqhkiG9w0BAQsFADBDMUEwPwYDVQQDEzhBREZTIFNpZ25pbmcgLSBhZGZzLnByZXByb2Quc2tpbGxzZnVuZGluZy5zZXJ2aWNlLmdvdi51azAeFw0xODExMjExMjM3MTJaFw0yMDExMjAxMjM3MTJaMEMxQTA/BgNVBAMTOEFERlMgU2lnbmluZyAtIGFkZnMucHJlcHJvZC5za2lsbHNmdW5kaW5nLnNlcnZpY2UuZ292LnVrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqkFOYtkoyM+korIURnmrhFWCsSeikmNXfg9DOoB5mzFleWlkQ4vPT375lo9q+rc3hKfEjIsVQIKrjVJjhYThO9Dct04sV5funwYncSDtd+IU1wQbNaYM05fnmYTty7qAL8OjcPwO+YgMmz3NWS5ahcxFtpCI4TuhZONP28MhUJXjlzkZSi0PM+kMu14vXJh8u0Iii/7OQ7eNQWM83Cd5Hd5PB/ci+ThvPnbMXEKCfhqbNXBHlBFfszFHec4FLRRhdnDxZwnK/CRRaSEE3tViYY7Gccdl+fZi87oSI3PjQJhNKZ2jdzHPXYtjlCOM3v/9+trDQMt9kzDhRWZ00khu+wIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBE9066fbUb+10sJZtuRZr+1oh6f/5ONYb9mMPkRZuO+Sxof5XL+wjPSQFqtMrcHOfm3M6Y5hnsdpFXlvW1ymq2a94Do5nB+X97LUFLlAVU+U6VGbUw1T6w8KSA5wuuxcPl3CgVwb+XnOQXBW0FDaLGqMWGnctaGeO7lF74QttXbtZTm4GXjsV0R+TU3DjddnpG4yzSs3BnBZowOepdq85vTjpJMOOiEp4WKWshEOTqlOXl2+8a09ZTW09AtRjDelIRkDqU5gOEIK8cuNhCspoTcFZGPN03w0IYq36mBIO4sq/uUYNNH6jRXNoPr4a4LLB7WbyDeOWgKnbXxUwlg2Hi&lt;/X509Certificate&gt;&lt;/X509Data&gt;&lt;/KeyInfo&gt;&lt;/ds:Signature&gt;&lt;/saml:Assertion&gt;&lt;/t:RequestedSecurityToken&gt;&lt;t:TokenType&gt;urn:oasis:names:tc:SAML:1.0:assertion&lt;/t:TokenType&gt;&lt;t:RequestType&gt;http://schemas.xmlsoap.org/ws/2005/02/trust/Issue&lt;/t:RequestType&gt;&lt;t:KeyType&gt;http://schemas.xmlsoap.org/ws/2005/05/identity/NoProofKey&lt;/t:KeyType&gt;&lt;/t:RequestSecurityTokenResponse&gt;" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="wctx" Value="{{wctx}}" RecordedValue="WsFedOwinState=E-_gwyWG0_JqMHfXloGjfA9bdLGkdS49rEP3oBuN7h_i8UG_ZnbiHYokk_hN9CCYzTFlKcMZeOFoIKw5AzJX7260gUk" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 26 - TRAINING PROVIDER ACCOUNT PAGE - SELECT YOUR COHORTS LINK" />
+    <TransactionTimer Name="S04_01_T26_PROVIDER_ACCOUNT_PAGE_SELECT_YOUR_COHORTS_LINK">
+      <Items>
+        <Request Method="GET" Guid="b83f0c3f-3eb1-4a18-868a-639868b40d9f" Version="1.1" Url="https://pp-pas.apprenticeships.education.gov.uk/{{DataSource5.DAS_QA_LOADTEST_TEST_DATA_FILE_005#csv.ProviderId}}/apprentices/Cohorts" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-pas.apprenticeships.education.gov.uk/account" />
+          </Headers>
+          <RequestPlugins>
+            <RequestPlugin Classname="ESFA.DAS.QA.LOADTEST.PLUGINS.InsertULN, ESFA.DAS.QA.LOADTEST.PROJECT.008.PLUGINS.PROD, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="Insert Unique Learner Number" Description="Inserts a Unique Learner Number to DB with every iteration">
+              <RuleParameters>
+                <RuleParameter Name="LastnameSearch" Value="Lastname" />
+                <RuleParameter Name="ULNInsert" Value="ULN" />
+                <RuleParameter Name="DBConnectionDataFile" Value="DataSource15.DAS_QA_LOADTEST_TEST_DATA_FILE_015#csv.DBConnectionString" />
+              </RuleParameters>
+            </RequestPlugin>
+          </RequestPlugins>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 27 - YOUR COHORTS PAGE - SELECT READY FOR REVIEW TILE" />
+    <TransactionTimer Name="S04_01_T27_YOUR_COHORTS_PAGE_SELECT_READY_FOR_REVIEW_TILE">
+      <Items>
+        <Request Method="GET" Guid="ef448196-b2ac-4f53-982a-c0a178804f34" Version="1.1" Url="https://pp-pas.apprenticeships.education.gov.uk/{{DataSource5.DAS_QA_LOADTEST_TEST_DATA_FILE_005#csv.ProviderId}}/apprentices/cohorts/review" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-pas.apprenticeships.education.gov.uk/{{DataSource5.DAS_QA_LOADTEST_TEST_DATA_FILE_005#csv.ProviderId}}/apprentices/Cohorts" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 28 - COHORTS TO REVIEW PAGE - SELECT COHORT DETAILS LINK" />
+    <TransactionTimer Name="S04_01_T28_COHORTS_TO_REVIEW_PAGE_SELECT_COHORT_DETAILS_LINK">
+      <Items>
+        <Request Method="GET" Guid="6f95c8d6-eab9-45c1-a6f3-d37e092787a2" Version="1.1" Url="https://pp-pas.apprenticeships.education.gov.uk/{{DataSource5.DAS_QA_LOADTEST_TEST_DATA_FILE_005#csv.ProviderId}}/apprentices/{{CohortRef3}}/Details" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-pas.apprenticeships.education.gov.uk/{{DataSource5.DAS_QA_LOADTEST_TEST_DATA_FILE_005#csv.ProviderId}}/apprentices/cohorts/review" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 29 - REVIEW YOUR COHORT PAGE - SELECT EDIT LINK" />
+    <Comment CommentText="SCRIPT STEP 30 - EDIT APPRENTICE DETAILS PAGE - ENTER ULN - SELECT SAVE BUTTON" />
+    <Comment CommentText="SCRIPT STEP 31 - REVIEW YOUR COHORT PAGE - SELECT SAVE AND CONTINUE BUTTON" />
+    <Request Method="GET" Guid="d8e920df-e4ed-40cd-a329-b5c827dd5662" Version="1.1" Url="https://pp-pas.apprenticeships.education.gov.uk/{{DataSource5.DAS_QA_LOADTEST_TEST_DATA_FILE_005#csv.ProviderId}}/apprentices/{{CohortRef3}}/Finished" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://pp-pas.apprenticeships.education.gov.uk/{{DataSource5.DAS_QA_LOADTEST_TEST_DATA_FILE_005#csv.ProviderId}}/apprentices/VYX869/Details" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam1.SaveStatus" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="SaveStatus-Approve" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="0" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam5.SaveStatus" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="Name" Value="SaveStatus-Approve" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+            <RuleParameter Name="Index" Value="0" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+    </Request>
+    <Comment CommentText="SCRIPT STEP 32 - YOUR COHORTS CHOOSE AN OPTION PAGE - SELECT SEND TO EMPLOYER - SELECT CONTINUE BUTTON" />
+    <TransactionTimer Name="S04_01_T32_CHOOSE_OPTION_ PAGE_SEND_EMPLOYER_CONTINUE_BUTTON">
+      <Items>
+        <Request Method="POST" Guid="0d76fbfb-cf50-4e69-93f1-6024caed5e87" Version="1.1" Url="https://pp-pas.apprenticeships.education.gov.uk/{{DataSource5.DAS_QA_LOADTEST_TEST_DATA_FILE_005#csv.ProviderId}}/apprentices/{{CohortRef3}}/Finished" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pp-pas.apprenticeships.education.gov.uk/10000291/apprentices/VYX869/RequestApproved" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-pas.apprenticeships.education.gov.uk/{{DataSource5.DAS_QA_LOADTEST_TEST_DATA_FILE_005#csv.ProviderId}}/apprentices/VYX869/Finished" />
+          </Headers>
+          <FormPostHttpBody>
+            <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="bZORxhh-_uMYP2qpXtRQAh3fV1qjzOkyqw4AGfg9HTNNuOHR7kedcoC4Hz6T0jLkcnW2FSuhsYHqZAl3ZyfMgEcTfivB3rYc97513L8G7EWbZDEJm9LiIzeHn6XsbvotrwO07A2" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="SaveStatus" Value="AmendAndSend" RecordedValue="Approve" CorrelationBinding="{{FormPostParam5.SaveStatus}}" UrlEncode="True" />
+            <FormPostParameter Name="ProviderId" Value="{{$HIDDEN1.ProviderId}}" RecordedValue="10000291" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="HashedCommitmentId" Value="{{$HIDDEN1.HashedCommitmentId}}" RecordedValue="VYX869" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="HasApprenticeships" Value="{{$HIDDEN1.HasApprenticeships}}" RecordedValue="True" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="InvalidApprenticeshipCount" Value="{{$HIDDEN1.InvalidApprenticeshipCount}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="ReadyForApproval" Value="{{$HIDDEN1.ReadyForApproval}}" RecordedValue="True" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="HasSignedTheAgreement" Value="{{$HIDDEN1.HasSignedTheAgreement}}" RecordedValue="True" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 33 - MESSAGE FOR PROVIDER PAGE - INPUT MESSAGE - SELECT SEND BUTTON" />
+    <TransactionTimer Name="S04_01_T33_MESSAGE_FOR_PROVIDER_PAGE_SELECT_SEND_BUTTON">
+      <Items>
+        <Request Method="POST" Guid="248387c3-147d-4fb0-b598-e8b15447b267" Version="1.1" Url="https://pp-pas.apprenticeships.education.gov.uk/{{DataSource5.DAS_QA_LOADTEST_TEST_DATA_FILE_005#csv.ProviderId}}/apprentices/{{CohortRef3}}/Submit" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pp-pas.apprenticeships.education.gov.uk/{{DataSource5.DAS_QA_LOADTEST_TEST_DATA_FILE_005#csv.ProviderId}}/apprentices/{{CohortRef3}}/Acknowledgement?saveStatus=AmendAndSend" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-pas.apprenticeships.education.gov.uk/10000291/apprentices/{{CohortRef3}}/Submit?SaveStatus=AmendAndSend" />
+          </Headers>
+          <FormPostHttpBody>
+            <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="VQ5cigQPQ5vR5wXr9WIXEZHnpffg_dWgnB2Rt6fET12ulGSNTsdPpqrYswoH5RgwygpmeuzngdkU5H9zPsARweJjxBpOYWSbKxYDd-UMIJLR4kcgxHwXRREKMdsik9kmFQIKSg2" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="Message" Value="{{LastName}}" RecordedValue="Testuseraaaaaaaadi&#xD;&#xA;" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="ProviderId" Value="{{$HIDDEN1.ProviderId}}" RecordedValue="10000291" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="SaveStatus" Value="AmendAndSend" RecordedValue="AmendAndSend" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="HashedCommitmentId" Value="{{$HIDDEN1.HashedCommitmentId}}" RecordedValue="MYX967" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 34 - COHORT APPROVED PAGE - SELECT HOME LINK" />
+    <TransactionTimer Name="S04_01_T34_COHORT_APPROVED_PAGE_SELECT_HOME_LINK">
+      <Items>
+        <Request Method="GET" Guid="55a006a5-a025-4b4c-8458-c51bfb2771cc" Version="1.1" Url="https://pp-pas.apprenticeships.education.gov.uk/account" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-pas.apprenticeships.education.gov.uk/{{DataSource5.DAS_QA_LOADTEST_TEST_DATA_FILE_005#csv.ProviderId}}/apprentices/VLLYX7/RequestApproved" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 35 - TRAINING PROVIDER ACCOUNT - SELECT SIGN OUT LINK" />
+    <TransactionTimer Name="S04_01_T35_TRAINING_PROVIDER_ACCOUNT_SELECT_SIGN_OUT_LINK">
+      <Items>
+        <Request Method="GET" Guid="9def1c6f-993d-415b-927a-37fbea15a2e2" Version="1.1" Url="https://pp-pas.apprenticeships.education.gov.uk/signout" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://adfs.preprod.skillsfunding.service.gov.uk/adfs/ls/" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-pas.apprenticeships.education.gov.uk/account" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="7f223a07-e612-4f4b-8028-5a192a7e2624" Version="1.1" Url="https://pplogon.fasst.org.uk/static/sfa/languages/lang-en.json" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Accept" Value="application/json, text/plain, */*" />
+            <Header Name="Referer" Value="https://pplogon.fasst.org.uk/Login/dialog/appl/sfa/wflow/samlslopage?SAMLResponse=tVZZk6LKEv4rhvPo2GziFmOfKMCFVlAWQX05UUCxySYFAv76Q2t3R3ffc%2BfOy43gJbcvs77MIuvXX3Ucda4ox0GazLrUE9ntoMROnSDxZt29vuiPu389%2F8Iwjuhsukm9tCxUhLM0wajThiZ4%2BrDNumWeTFOIAzxNYIzwtLCnGpA2U%2FqJnGZ5WqR2GnU7AsJFkMDins4vigxPCSLLohY5eXIhxsVTmntP5ZlokwUJ4QSwtRGwdSGwC4nKjdKKeM2JozSDHup2RKFNXgbO3%2ByIoRw0HpJDh0GDIWs5FEW6zsiiKAjJCd26Ju%2FF6%2Bms%2BzccUZCxSdgfkTbqD0iG6lsWZPqOM3AmrEu6k3sQxiUSE1zApJh1aZKa9Mn2G%2BoUOaXZKTV4Yijy1O0Y7yy2J%2B6%2BcTa9B%2Befqfo9Uy0DKH9lp%2Fv8B%2By8AopO9ov4nOz5l4OnWuC1LJf5e5cc%2FKC7xauq6qliXoEImiRJgpwQrY%2BDA%2B9H9yMWOWLipneRh0maBDaMgtu9bxIq%2FNTpgMhL86Dw4%2F8CTBEU%2BQrcR7Xdt6lB8qNLfC3tj4HIwXuF%2FTjN0Y8cwz72Ic0O3yBV5KK8nVvU2avirPvjz8bhHqrnMMFumsf4q%2Fg%2Fy%2FpCHEquqJ1H5PTx%2B%2BneSvtzwH8njPjPGoXAa2%2FRH7L3pcyWNOqtrgeIAaMSvWX5IPEhfpuCj669h7S6NWo%2B7AeWnAiwgB%2FCYxg1lLc3%2BJtSbsf%2BmZdnv53wn53tfuYgF5ZR8bOzmW3SxEmTVjvbBTmCSWdTOD87%2FGzJ3cv9hv6e8JFfLmOrvRgUTbUjQLJDekIzwxHDjCjqI%2FiL5zfIb6fQSitEdvH%2FOsZn%2BPeU%2FOtfwW1vYYGeJVEUzBvPg%2FPWA5XIAU98AWtPGzG7GzTtnQTIJa9dlppoMYIy5zhlD6QlWfM38MJ5ssGBow7ODi%2BpUjVXjoKhKOt5lSnw8BIdzYGnr9SzpIwr4WFbzauTZNHs2aIH9VwA2wcG1jlajU7xgrJWSv0SgvNDL%2Bkr0yedFXfbBuOrveKwRTtXK2Dj40G%2BOTx7tWO7dEx8lbjBQdDntCScazkErKwfqe0ibXXid11l6fONBM5LQO3nnC%2FxKinW8xtQHzlTnY%2B4zI4N3wo4yVkqtXAD8sNm69y5vlqxerXCuSKBwR2Dr6XVaWm0NRnYEeaxxCt3PaglB65U0l5Jw00zqexlfT3Rk3ITn3ybkclNPGlODUvBZlx53jz4zjVouQYDkRMq8Gpfg7Ttj8Lz42q15bGz2%2BbDSW5YarMo1BPJcaGsRaqbDelYYG1%2FK6yBoBG9WBiZL8LS7DWkYDXuUK4EcN1hpecK%2B9oWuVA5BgI6GtlgE2lDchXRYYzU%2FfFiXNzzyNf1hehYilAN7JGixY0JrEFdb5pAZBjPs83zYasmG96j8WA597LzSvcjvFiEkqJm8cpA7LjyLSFi67W3pHuw5I3dgOkJY%2BBcZHZBu7nG%2BXwAS2uXNqZ2qM2d6W4a6rakz2ZWHzwPhsO9TRtGiVygCE1JjNMqDiaip89fIt4b3nY98ZoEMnNo6perZHH0njiq1nVoX8JDMIHx7iqn1bEcaecjFiZHL86qcF7Ogz0%2FjCi4X3NZIlvAkzgA5q9z%2BrJOT6J%2FtWWgzBecAoSWew6s7JvHmtgpbwpLX04qTs4mLOSMCGLk4yNxKifVOkyZ05lOhiMZ4c3LDdK9cFGQ2%2B0Fh2t2cJLX2204yMLjjWx2NCJl0mobqgZCTzHFvUDKZyozeH2tIKEcvGydqwyvfDgkw1G8KcsGXMwgoAIjGxUX2FyuWx%2F6i16hEo5c2lLJDfUzyU0OO69QD83hQO0puR0seF5lnH%2FV6sZSfYEa9pqtbo8Pt17PW4WRuXbHWaylN3Vx4C6XjCP8hGP3%2B2Ud8xZY9UapIWo2CNZszoy83VmwDXOBoxgZTsqmEgJFjCbqbccwuwLCfEckG%2BWUEguKYjhFlo1DuGGuaDTKCcH07WDkaiMBJeC0El24OoHZx4%2Fq80%2FpQ%2FlYAsTn9UB83h8fr0mtaGX8TeRTB3XuK%2Bb37yR8955qpW0jjO%2BL8hss8a%2BP1ud%2FAA%3D%3D" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="a501133f-118e-4e30-9ac5-969ebba1d5e4" Version="1.1" Url="https://pplogon.fasst.org.uk/static/sfa/apps/sfa/partials/sfa-navbar.html" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Accept" Value="application/json, text/plain, */*" />
+            <Header Name="Referer" Value="https://pplogon.fasst.org.uk/Login/dialog/appl/sfa/wflow/samlslopage?SAMLResponse=tVZZk6LKEv4rhvPo2GziFmOfKMCFVlAWQX05UUCxySYFAv76Q2t3R3ffc%2BfOy43gJbcvs77MIuvXX3Ucda4ox0GazLrUE9ntoMROnSDxZt29vuiPu389%2F8Iwjuhsukm9tCxUhLM0wajThiZ4%2BrDNumWeTFOIAzxNYIzwtLCnGpA2U%2FqJnGZ5WqR2GnU7AsJFkMDins4vigxPCSLLohY5eXIhxsVTmntP5ZlokwUJ4QSwtRGwdSGwC4nKjdKKeM2JozSDHup2RKFNXgbO3%2ByIoRw0HpJDh0GDIWs5FEW6zsiiKAjJCd26Ju%2FF6%2Bms%2BzccUZCxSdgfkTbqD0iG6lsWZPqOM3AmrEu6k3sQxiUSE1zApJh1aZKa9Mn2G%2BoUOaXZKTV4Yijy1O0Y7yy2J%2B6%2BcTa9B%2Befqfo9Uy0DKH9lp%2Fv8B%2By8AopO9ov4nOz5l4OnWuC1LJf5e5cc%2FKC7xauq6qliXoEImiRJgpwQrY%2BDA%2B9H9yMWOWLipneRh0maBDaMgtu9bxIq%2FNTpgMhL86Dw4%2F8CTBEU%2BQrcR7Xdt6lB8qNLfC3tj4HIwXuF%2FTjN0Y8cwz72Ic0O3yBV5KK8nVvU2avirPvjz8bhHqrnMMFumsf4q%2Fg%2Fy%2FpCHEquqJ1H5PTx%2B%2BneSvtzwH8njPjPGoXAa2%2FRH7L3pcyWNOqtrgeIAaMSvWX5IPEhfpuCj669h7S6NWo%2B7AeWnAiwgB%2FCYxg1lLc3%2BJtSbsf%2BmZdnv53wn53tfuYgF5ZR8bOzmW3SxEmTVjvbBTmCSWdTOD87%2FGzJ3cv9hv6e8JFfLmOrvRgUTbUjQLJDekIzwxHDjCjqI%2FiL5zfIb6fQSitEdvH%2FOsZn%2BPeU%2FOtfwW1vYYGeJVEUzBvPg%2FPWA5XIAU98AWtPGzG7GzTtnQTIJa9dlppoMYIy5zhlD6QlWfM38MJ5ssGBow7ODi%2BpUjVXjoKhKOt5lSnw8BIdzYGnr9SzpIwr4WFbzauTZNHs2aIH9VwA2wcG1jlajU7xgrJWSv0SgvNDL%2Bkr0yedFXfbBuOrveKwRTtXK2Dj40G%2BOTx7tWO7dEx8lbjBQdDntCScazkErKwfqe0ibXXid11l6fONBM5LQO3nnC%2FxKinW8xtQHzlTnY%2B4zI4N3wo4yVkqtXAD8sNm69y5vlqxerXCuSKBwR2Dr6XVaWm0NRnYEeaxxCt3PaglB65U0l5Jw00zqexlfT3Rk3ITn3ybkclNPGlODUvBZlx53jz4zjVouQYDkRMq8Gpfg7Ttj8Lz42q15bGz2%2BbDSW5YarMo1BPJcaGsRaqbDelYYG1%2FK6yBoBG9WBiZL8LS7DWkYDXuUK4EcN1hpecK%2B9oWuVA5BgI6GtlgE2lDchXRYYzU%2FfFiXNzzyNf1hehYilAN7JGixY0JrEFdb5pAZBjPs83zYasmG96j8WA597LzSvcjvFiEkqJm8cpA7LjyLSFi67W3pHuw5I3dgOkJY%2BBcZHZBu7nG%2BXwAS2uXNqZ2qM2d6W4a6rakz2ZWHzwPhsO9TRtGiVygCE1JjNMqDiaip89fIt4b3nY98ZoEMnNo6perZHH0njiq1nVoX8JDMIHx7iqn1bEcaecjFiZHL86qcF7Ogz0%2FjCi4X3NZIlvAkzgA5q9z%2BrJOT6J%2FtWWgzBecAoSWew6s7JvHmtgpbwpLX04qTs4mLOSMCGLk4yNxKifVOkyZ05lOhiMZ4c3LDdK9cFGQ2%2B0Fh2t2cJLX2204yMLjjWx2NCJl0mobqgZCTzHFvUDKZyozeH2tIKEcvGydqwyvfDgkw1G8KcsGXMwgoAIjGxUX2FyuWx%2F6i16hEo5c2lLJDfUzyU0OO69QD83hQO0puR0seF5lnH%2FV6sZSfYEa9pqtbo8Pt17PW4WRuXbHWaylN3Vx4C6XjCP8hGP3%2B2Ud8xZY9UapIWo2CNZszoy83VmwDXOBoxgZTsqmEgJFjCbqbccwuwLCfEckG%2BWUEguKYjhFlo1DuGGuaDTKCcH07WDkaiMBJeC0El24OoHZx4%2Fq80%2FpQ%2FlYAsTn9UB83h8fr0mtaGX8TeRTB3XuK%2Bb37yR8955qpW0jjO%2BL8hss8a%2BP1ud%2FAA%3D%3D" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="0d77ef14-9878-46de-b85d-8bf75da22721" Version="1.1" Url="https://pplogon.fasst.org.uk/static/sfa/apps/sfa/partials/sfa-footer.html" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Accept" Value="application/json, text/plain, */*" />
+            <Header Name="Referer" Value="https://pplogon.fasst.org.uk/Login/dialog/appl/sfa/wflow/samlslopage?SAMLResponse=tVZZk6LKEv4rhvPo2GziFmOfKMCFVlAWQX05UUCxySYFAv76Q2t3R3ffc%2BfOy43gJbcvs77MIuvXX3Ucda4ox0GazLrUE9ntoMROnSDxZt29vuiPu389%2F8Iwjuhsukm9tCxUhLM0wajThiZ4%2BrDNumWeTFOIAzxNYIzwtLCnGpA2U%2FqJnGZ5WqR2GnU7AsJFkMDins4vigxPCSLLohY5eXIhxsVTmntP5ZlokwUJ4QSwtRGwdSGwC4nKjdKKeM2JozSDHup2RKFNXgbO3%2ByIoRw0HpJDh0GDIWs5FEW6zsiiKAjJCd26Ju%2FF6%2Bms%2BzccUZCxSdgfkTbqD0iG6lsWZPqOM3AmrEu6k3sQxiUSE1zApJh1aZKa9Mn2G%2BoUOaXZKTV4Yijy1O0Y7yy2J%2B6%2BcTa9B%2Befqfo9Uy0DKH9lp%2Fv8B%2By8AopO9ov4nOz5l4OnWuC1LJf5e5cc%2FKC7xauq6qliXoEImiRJgpwQrY%2BDA%2B9H9yMWOWLipneRh0maBDaMgtu9bxIq%2FNTpgMhL86Dw4%2F8CTBEU%2BQrcR7Xdt6lB8qNLfC3tj4HIwXuF%2FTjN0Y8cwz72Ic0O3yBV5KK8nVvU2avirPvjz8bhHqrnMMFumsf4q%2Fg%2Fy%2FpCHEquqJ1H5PTx%2B%2BneSvtzwH8njPjPGoXAa2%2FRH7L3pcyWNOqtrgeIAaMSvWX5IPEhfpuCj669h7S6NWo%2B7AeWnAiwgB%2FCYxg1lLc3%2BJtSbsf%2BmZdnv53wn53tfuYgF5ZR8bOzmW3SxEmTVjvbBTmCSWdTOD87%2FGzJ3cv9hv6e8JFfLmOrvRgUTbUjQLJDekIzwxHDjCjqI%2FiL5zfIb6fQSitEdvH%2FOsZn%2BPeU%2FOtfwW1vYYGeJVEUzBvPg%2FPWA5XIAU98AWtPGzG7GzTtnQTIJa9dlppoMYIy5zhlD6QlWfM38MJ5ssGBow7ODi%2BpUjVXjoKhKOt5lSnw8BIdzYGnr9SzpIwr4WFbzauTZNHs2aIH9VwA2wcG1jlajU7xgrJWSv0SgvNDL%2Bkr0yedFXfbBuOrveKwRTtXK2Dj40G%2BOTx7tWO7dEx8lbjBQdDntCScazkErKwfqe0ibXXid11l6fONBM5LQO3nnC%2FxKinW8xtQHzlTnY%2B4zI4N3wo4yVkqtXAD8sNm69y5vlqxerXCuSKBwR2Dr6XVaWm0NRnYEeaxxCt3PaglB65U0l5Jw00zqexlfT3Rk3ITn3ybkclNPGlODUvBZlx53jz4zjVouQYDkRMq8Gpfg7Ttj8Lz42q15bGz2%2BbDSW5YarMo1BPJcaGsRaqbDelYYG1%2FK6yBoBG9WBiZL8LS7DWkYDXuUK4EcN1hpecK%2B9oWuVA5BgI6GtlgE2lDchXRYYzU%2FfFiXNzzyNf1hehYilAN7JGixY0JrEFdb5pAZBjPs83zYasmG96j8WA597LzSvcjvFiEkqJm8cpA7LjyLSFi67W3pHuw5I3dgOkJY%2BBcZHZBu7nG%2BXwAS2uXNqZ2qM2d6W4a6rakz2ZWHzwPhsO9TRtGiVygCE1JjNMqDiaip89fIt4b3nY98ZoEMnNo6perZHH0njiq1nVoX8JDMIHx7iqn1bEcaecjFiZHL86qcF7Ogz0%2FjCi4X3NZIlvAkzgA5q9z%2BrJOT6J%2FtWWgzBecAoSWew6s7JvHmtgpbwpLX04qTs4mLOSMCGLk4yNxKifVOkyZ05lOhiMZ4c3LDdK9cFGQ2%2B0Fh2t2cJLX2204yMLjjWx2NCJl0mobqgZCTzHFvUDKZyozeH2tIKEcvGydqwyvfDgkw1G8KcsGXMwgoAIjGxUX2FyuWx%2F6i16hEo5c2lLJDfUzyU0OO69QD83hQO0puR0seF5lnH%2FV6sZSfYEa9pqtbo8Pt17PW4WRuXbHWaylN3Vx4C6XjCP8hGP3%2B2Ud8xZY9UapIWo2CNZszoy83VmwDXOBoxgZTsqmEgJFjCbqbccwuwLCfEckG%2BWUEguKYjhFlo1DuGGuaDTKCcH07WDkaiMBJeC0El24OoHZx4%2Fq80%2FpQ%2FlYAsTn9UB83h8fr0mtaGX8TeRTB3XuK%2Bb37yR8955qpW0jjO%2BL8hss8a%2BP1ud%2FAA%3D%3D" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 36 - OPEN CREATE EMPLOYER ACCOUNT PAGE" />
+    <TransactionTimer Name="S04_01_T36_OPEN_CREATE_EMPLOYER_ACCOUNT_PAGE">
+      <Items>
+        <Request Method="GET" Guid="e2a0ade9-e650-496c-9ddd-c3f4db1eaf51" Version="1.1" Url="https://accounts.pp-eas.apprenticeships.education.gov.uk/" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 37 - CREATE EMPLOYER ACCOUNT - SELECT SIGN IN LINK" />
+    <TransactionTimer Name="S04_01_T37_CREATE_EMPLOYER_ACCOUNT_SELECT_SIGN_IN_LINK">
+      <Items>
+        <Request Method="GET" Guid="0b9ad8cb-c121-4366-a4f1-5bcdb005df8a" Version="1.1" Url="https://accounts.pp-eas.apprenticeships.education.gov.uk/service/signIn" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pp-login.apprenticeships.education.gov.uk/identity/employer/login?id=b3f243bfcbff784675f50f4bef963606&amp;returnUrl=https%3a%2f%2fpp-login.apprenticeships.education.gov.uk%2fidentity%2fconnect%2fauthorize%3fclient_id%3deasaccpp%26response_type%3dcode%26scope%3dopenid%2520profile%26redirect_uri%3dhttps%253A%252F%252Faccounts.pp-eas.apprenticeships.education.gov.uk%252Fservice%252FsignIn%26state%3d9H-x3akhHFOEYrE-kTfZOzaU6gSQoUoW6tgiI9f1ISCfMG7UwM9afd32bmbFFoMekAdDia8ENBDaQJcRbUVEHhZT9Uha7pe4nTnJlmLy5Cdw8anza3lbKZGdEJ6dzUzg7a3hjNgEX7aJiSxU76CjYRiKzvPnYA1DwTjIqfa7dbEqVSuzsRfQHaNlqs57QQT0%26nonce%3d39d608478250489dae7481bee06af351&amp;clientId=easaccpp" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://accounts.pp-eas.apprenticeships.education.gov.uk/service/index" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 38 - EMPLOYER ACCOUNT SIGN IN PAGE - SELECT SIGN IN BUTTON" />
+    <TransactionTimer Name="S04_01_T38_EMPLOYER_ACCOUNT_SIGN_IN_PAGE_SELECT_SIGN_IN_BUTTON">
+      <Items>
+        <Request Method="POST" Guid="75262192-79b9-40e5-94a1-63b55fff56c3" Version="1.1" Url="https://pp-login.apprenticeships.education.gov.uk/identity/employer/login" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/employer/login?id=06e41a0239708178179b743cc196c826&amp;returnUrl=https%3a%2f%2fpp-login.apprenticeships.education.gov.uk%2fidentity%2fconnect%2fauthorize%3fclient_id%3deaspp%26response_type%3dcode%26scope%3dopenid%2520profile%26redirect_uri%3dhttps%253A%252F%252Fpp-eas.apprenticeships.education.gov.uk%252Fservice%252FsignIn%26state%3dOheY0BSl-CiyLVI9W3kSEnZPOkZKwRZl84UTeFV3aydJqK9LHgHGeKZ-NCftl08AjON57z80-JbghYXI64hnYWRYF4KMeVv11DniLLHCHvDJhXYsP1hxITCZJBBf7CdE0KBU2C1R9zDggzcXC6zxUxm6x1s%26nonce%3d02f4045d6e814c6bb378fe098959d6e7&amp;clientId=easpp" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="id" Value="06e41a0239708178179b743cc196c826" RecordedValue="06e41a0239708178179b743cc196c826" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="returnUrl" Value="https%3a%2f%2fpp-login.apprenticeships.education.gov.uk%2fidentity%2fconnect%2fauthorize%3fclient_id%3deaspp%26response_type%3dcode%26scope%3dopenid%2520profile%26redirect_uri%3dhttps%253A%252F%252Fpp-eas.apprenticeships.education.gov.uk%252Fservice%252FsignIn%26state%3dOheY0BSl-CiyLVI9W3kSEnZPOkZKwRZl84UTeFV3aydJqK9LHgHGeKZ-NCftl08AjON57z80-JbghYXI64hnYWRYF4KMeVv11DniLLHCHvDJhXYsP1hxITCZJBBf7CdE0KBU2C1R9zDggzcXC6zxUxm6x1s%26nonce%3d02f4045d6e814c6bb378fe098959d6e7" RecordedValue="https%3a%2f%2f{{EnvironmentLogin}}%2fidentity%2fconnect%2fauthorize%3fclient_id%3deaspp%26response_type%3dcode%26scope%3dopenid%2520profile%26redirect_uri%3dhttps%253A%252F%252F{{Environment}}%252Fservice%252FsignIn%26state%3dOheY0BSl-CiyLVI9W3kSEnZPOkZKwRZl84UTeFV3aydJqK9LHgHGeKZ-NCftl08AjON57z80-JbghYXI64hnYWRYF4KMeVv11DniLLHCHvDJhXYsP1hxITCZJBBf7CdE0KBU2C1R9zDggzcXC6zxUxm6x1s%26nonce%3d02f4045d6e814c6bb378fe098959d6e7" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="clientId" Value="easpp" RecordedValue="easpp" CorrelationBinding="{{QueryStringParam82.clientId}}" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+          <FormPostHttpBody>
+            <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="LVUdcdmr-IwR1lBZeDgD4MCcp1OrUw_ffMUk_lbx5m_e_UgMBURPVPbvoE-9OaX1bazALB2_hIQCyutrN5FJdIHUwEzIqdQobaLZULdH96I1" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="EmailAddress" Value="" RecordedValue="tf4.tl4@test.com" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="Password" Value="" RecordedValue="Password1" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 39 - EMPLOYER ACCOUNT PAGE - SELECT APPRENTICES LINK" />
+    <TransactionTimer Name="S04_01_T39_EMPLOYER_ACCOUNT_PAGE_SELECT_APPRENTICES_LINK">
+      <Items>
+        <Request Method="GET" Guid="f0d3bf34-0ba7-46b3-a15c-15dc590783b9" Version="1.1" Url="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/home" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://accounts.pp-eas.apprenticeships.education.gov.uk/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/teams" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="CohortRef1" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value=".userID = '" />
+                <RuleParameter Name="EndsWith" Value="'" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="ExtractRandomMatch" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="SearchInHeaders" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 40 - APPRENTICES PAGE - SELECT YOUR COHORTS LINK" />
+    <TransactionTimer Name="S04_01_T40_PROVIDER_ACCOUNT_PAGE_SELECT_YOUR_COHORTS_LINK">
+      <Items>
+        <Request Method="GET" Guid="f0d58ba2-bd1e-4129-bcce-efd8ea2ac9d7" Version="1.1" Url="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/cohorts" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <DependentRequests>
+            <Request Method="GET" Guid="c6e51456-856b-4f66-9ea5-9f878691f759" Version="1.1" Url="https://www.googletagmanager.com/a" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/cohorts" />
+              </Headers>
+              <QueryStringParameters>
+                <QueryStringParameter Name="id" Value="GTM-KWQBWGJ" RecordedValue="GTM-KWQBWGJ" CorrelationBinding="{{QueryStringParam25.id}}" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="cv" Value="37" RecordedValue="37" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="{{QueryStringParam67.v}}" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="t" Value="t" RecordedValue="t" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="pid" Value="820024300" RecordedValue="820024300" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="rv" Value="9b0" RecordedValue="9b0" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="es" Value="1" RecordedValue="1" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="e" Value="*" RecordedValue="*" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="eid" Value="0" RecordedValue="0" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="tc" Value="90" RecordedValue="90" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="z" Value="0" RecordedValue="0" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+              </QueryStringParameters>
+            </Request>
+            <Request Method="GET" Guid="bf082fd4-7871-4ee7-85a3-5747d0b73e5a" Version="1.1" Url="https://www.googletagmanager.com/a" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+              <Headers>
+                <Header Name="Referer" Value="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/cohorts" />
+              </Headers>
+              <QueryStringParameters>
+                <QueryStringParameter Name="id" Value="GTM-KWQBWGJ" RecordedValue="GTM-KWQBWGJ" CorrelationBinding="{{QueryStringParam94.id}}" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="cv" Value="37" RecordedValue="37" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="v" Value="3" RecordedValue="3" CorrelationBinding="{{QueryStringParam140.v}}" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="t" Value="t" RecordedValue="t" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="pid" Value="820024300" RecordedValue="820024300" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="rv" Value="9b0" RecordedValue="9b0" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="es" Value="1" RecordedValue="1" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="e" Value="gtm.js" RecordedValue="gtm.js" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="eid" Value="1" RecordedValue="1" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="tc" Value="90" RecordedValue="90" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="tr" Value="1lcl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.5lcl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl" RecordedValue="1lcl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.1cl.5lcl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl.5cl" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+                <QueryStringParameter Name="z" Value="0" RecordedValue="0" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+              </QueryStringParameters>
+            </Request>
+          </DependentRequests>
+          <Headers>
+            <Header Name="Referer" Value="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/home?code=ce7ce2b302713036a2b3c7cda9db6e52&amp;state=f6dd39d9e5c54234bf153d56c7117cba" />
+          </Headers>
+          <CorrelationExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam25.id" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="?id=" />
+                <RuleParameter Name="EndsWith" Value="&amp;" />
+                <RuleParameter Name="Index" Value="1" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam94.id" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="?id=" />
+                <RuleParameter Name="EndsWith" Value="&amp;" />
+                <RuleParameter Name="Index" Value="1" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam170.id" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="?id=" />
+                <RuleParameter Name="EndsWith" Value="&amp;" />
+                <RuleParameter Name="Index" Value="1" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+          </CorrelationExtractionRules>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 41 - YOUR COHORT REQUEST PAGE - SELECT READY FOR REVIEW TILE" />
+    <TransactionTimer Name="S04_01_T41_YOUR_COHORTS_PAGE_SELECT_READY_FOR_REVIEW_TILE">
+      <Items>
+        <Request Method="GET" Guid="eebaa4ac-90df-4404-bb9a-a2a0f2fbab68" Version="1.1" Url="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/cohorts/review" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/cohorts" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 42 - COHORTS FRO REVIEW PAGE - SELECT DETAILS LINK" />
+    <Request Method="GET" Guid="87748b60-c68e-4067-a82d-876f6d91e482" Version="1.1" Url="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/{{CohortRef3}}/details" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/cohorts/review" />
+      </Headers>
+    </Request>
+    <Comment CommentText="SCRIPT STEP 43 - REVIEW YOUR COHORT PAGE - SELECT SAVE AND CONTINUE BUTTON" />
+    <TransactionTimer Name="S04_01_T43_COHORTS_TO_REVIEW_PAGE_SELECT_COHORT_DETAILS_LINK">
+      <Items>
+        <Request Method="GET" Guid="01f694e9-0da9-4ba4-9d89-73a33692ce62" Version="1.1" Url="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/{{CohortRef3}}/finished" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/{{CohortRef3}}/details" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <CorrelationExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam1.SaveStatus" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="SaveStatus-ApproveAndSend" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam2.SaveStatus" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="SaveStatus-ApproveAndSend" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+          </CorrelationExtractionRules>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 44 - CHOOSE AN OPTION PAGE - SELECT APPROVE AND SEND TO TRAINING PROVIDER - SELECT CONTINUE BUTTON" />
+    <TransactionTimer Name="S04_01_T44_OPTION_PAGE _APPROVE_SEND_PROVIDER_CONTINUE_BUTTON">
+      <Items>
+        <Request Method="POST" Guid="a159f959-7c04-4ce7-95eb-508e639c3671" Version="1.1" Url="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/{{CohortRef3}}/finished" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/{{CohortRef3}}/submit?SaveStatus=ApproveAndSend" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/{{CohortRef3}}/finished" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <CorrelationExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam3.__RequestVerificationToken" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam4.HashedCommitmentId" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                <RuleParameter Name="Index" Value="1" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam5.LegalEntitySource" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="ght=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; wid" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam6.ProviderName" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                <RuleParameter Name="Index" Value="9" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam7.SaveStatus" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                <RuleParameter Name="Index" Value="11" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+          </CorrelationExtractionRules>
+          <FormPostHttpBody>
+            <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="20DO2PlYb765oIEGkbId8lYVomXF3_Y87Cpizagc4fWOqxho8r3yiuc09kRlqM-_9_eXkv2HjOCklpmJFUfgCZH7f0nVS4vW7drB6fjyHbWWQ4OqLyHN-IcutJdXXXtfts3Ncg2" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="SaveStatus" Value="ApproveAndSend" RecordedValue="ApproveAndSend" CorrelationBinding="{{FormPostParam2.SaveStatus}}" UrlEncode="True" />
+            <FormPostParameter Name="HashedCommitmentId" Value="{{$HIDDEN1.HashedCommitmentId}}" RecordedValue="MYX967" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="HasApprenticeships" Value="{{$HIDDEN1.HasApprenticeships}}" RecordedValue="True" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="InvalidApprenticeshipCount" Value="{{$HIDDEN1.InvalidApprenticeshipCount}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="NotReadyForApproval" Value="{{$HIDDEN1.NotReadyForApproval}}" RecordedValue="False" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 45 - MESSAGE FOR PROVIDER PAGE - INPUT MESSAGE - SELECT SEND BUTTON" />
+    <TransactionTimer Name="S04_01_T45_MESSAGE_FOR_PROVIDER_PAGE_SELECT_SEND_BUTTON">
+      <Items>
+        <Request Method="POST" Guid="d6b82265-b6f0-497b-ba15-c23b609fa03e" Version="1.1" Url="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/{{CohortRef3}}/submit" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/{{CohortRef3}}/Acknowledgement?SaveStatus=ApproveAndSend" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/{{CohortRef3}}/submit?SaveStatus=ApproveAndSend" />
+          </Headers>
+          <FormPostHttpBody>
+            <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="lp1Pmn9kf-HWFux1BIvB_bohflxZK1mWQF9irH8AMDqazvmCrmwVHGvuIgyBPM_jAUUocK1OkePDFp2HTjlpNN5v86hu4eUCyT-AAdBKR5o75g1W3sOEuM9py-G4ETCupv6uig2" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="Message" Value="{{LastName}}" RecordedValue="Testuseraaaaaaannl@eoi.com&#xD;&#xA;" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="HashedCommitmentId" Value="{{$HIDDEN1.HashedCommitmentId}}" RecordedValue="MYX967" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="TransferConnectionCode" Value="{{$HIDDEN1.TransferConnectionCode}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="LegalEntityCode" Value="{{$HIDDEN1.LegalEntityCode}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="LegalEntityName" Value="{{$HIDDEN1.LegalEntityName}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="LegalEntityAddress" Value="{{$HIDDEN1.LegalEntityAddress}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="LegalEntitySource" Value="{{$HIDDEN1.LegalEntitySource}}" RecordedValue="0" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="AccountLegalEntityPublicHashedId" Value="{{$HIDDEN1.AccountLegalEntityPublicHashedId}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="ProviderId" Value="{{$HIDDEN1.ProviderId}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="ProviderName" Value="{{$HIDDEN1.ProviderName}}" RecordedValue="ANGLIA RUSKIN UNIVERSITY HIGHER EDUCATION CORPORATION" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="CohortRef" Value="{{$HIDDEN1.CohortRef}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="SaveStatus" Value="{{$HIDDEN1.SaveStatus}}" RecordedValue="ApproveAndSend" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 46 - CHANGES PENDING PAGE - SELECT HOME LINK" />
+    <TransactionTimer Name="S04_01_T46_CHANGES_PENDING_PAGE_SELECT_HOME_LINK">
+      <Items>
+        <Request Method="GET" Guid="223666c7-34c2-4d71-915f-d89ec44e5c0e" Version="1.1" Url="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/home" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-eas.apprenticeships.education.gov.uk/commitments/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/apprentices/{{CohortRef3}}/Acknowledgement?SaveStatus=ApproveAndSend" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 47 - EMPLOYER ACCOUNT PAGE - SELECT SIGN OUT LINK" />
+    <TransactionTimer Name="S04_01_T47_EMPLOYER_ACCOUNT_PAGE_SELECT_SIGN_OUT_LINK">
+      <Items>
+        <Request Method="GET" Guid="f99e10d9-a9c1-4074-88a8-d598c2be8c6b" Version="1.1" Url="https://accounts.pp-eas.apprenticeships.education.gov.uk/service/signOut" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://accounts.pp-eas.apprenticeships.education.gov.uk/accounts/{{DataSource6.DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv.Employer_AccountID}}/teams?" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="63302b55-abc1-4285-bbcc-6c4adf61be88" Version="1.1" Url="https://pp-login.apprenticeships.education.gov.uk/bundles/screen" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="v" Value="sVXB6jzilt1nVSNlS57LnOPveP7GgPMMp1eb2WI92gc1" RecordedValue="sVXB6jzilt1nVSNlS57LnOPveP7GgPMMp1eb2WI92gc1" CorrelationBinding="{{QueryStringParam27.v}}" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="4b6b604e-df78-4017-9a69-40e1c98be1ef" Version="1.1" Url="https://pp-login.apprenticeships.education.gov.uk/bundles/sfajs" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="v" Value="Jbj2Y_xO24wPC3zyuRgONPebgpj-X7hbkl5wrtfjXlE1" RecordedValue="Jbj2Y_xO24wPC3zyuRgONPebgpj-X7hbkl5wrtfjXlE1" CorrelationBinding="{{QueryStringParam33.v}}" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="97835a3a-eeca-46f5-b409-46a6c8d8639b" Version="1.1" Url="https://accounts.pp-eas.apprenticeships.education.gov.uk/service/signoutcleanup" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="dc470720-1483-4763-8e29-03e798411be6" Version="1.1" Url="https://forecasting.pp-eas.apprenticeships.education.gov.uk/" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="f042444d-cfb6-4e36-b0f3-e0f4e7454fdd" Version="1.1" Url="https://permissions.pp-eas.apprenticeships.education.gov.uk/signoutcleanup" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/logout?id=37511529e74ebdf54ed9e580e002ac50" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 48 - LOGGED OUT PAGE - SELECT CONTINUE BUTTON" />
+    <TransactionTimer Name="S04_01_T48_LOGGED_OUT_PAGE_SELECT_CONTINUE_BUTTON">
+      <Items>
+        <Request Method="GET" Guid="f695d3a0-55d8-409f-b42e-05c990ab0531" Version="1.1" Url="https://pp-login.apprenticeships.education.gov.uk/bundles/sfajs" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/logout?id=63da6b8890fd1b79e37d5f76704cb617" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="v" Value="Jbj2Y_xO24wPC3zyuRgONPebgpj-X7hbkl5wrtfjXlE1" RecordedValue="Jbj2Y_xO24wPC3zyuRgONPebgpj-X7hbkl5wrtfjXlE1" CorrelationBinding="{{QueryStringParam46.v}}" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+        <Request Method="GET" Guid="1662315b-4939-4743-9f14-a28f9303a1ff" Version="1.1" Url="https://forecasting.pp-eas.apprenticeships.education.gov.uk/" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/logout?id=ebe729b83705574ce004b1a2550b9170" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="2121041d-e75a-43c4-9fba-9d428065206b" Version="1.1" Url="https://permissions.pp-eas.apprenticeships.education.gov.uk/signoutcleanup" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/logout?id=ebe729b83705574ce004b1a2550b9170" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="89855a29-9e88-449a-90ab-234aebc49671" Version="1.1" Url="https://accounts.pp-eas.apprenticeships.education.gov.uk/service/signoutcleanup" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/logout?id=cdb90bf7577192dac73d82d6df27c722" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 49 - REDIRECTED TO CREATE EMPLOYER ACCOUNT PAGE" />
+    <TransactionTimer Name="S04_01_T49_REDIRECTED_TO_CREATE_EMPLOYER_ACCOUNT_PAGE">
+      <Items>
+        <Request Method="GET" Guid="e74e1416-d730-4ae9-a084-5d8e9411261f" Version="1.1" Url="https://accounts.pp-eas.apprenticeships.education.gov.uk/service/index" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+      </Items>
+    </TransactionTimer>
+    <Request Method="GET" Guid="bde2d6ea-4de8-42b8-a085-0584de2caf87" Version="1.1" Url="https://pp-pas.apprenticeships.education.gov.uk/" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False" />
+  </Items>
+  <DataSources>
+    <DataSource Name="DataSource15" Provider="Microsoft.VisualStudio.TestTools.DataSource.CSV" Connection="C:\ESFA_DAS_QA_LOADTEST_TEST_DATA_FILES\DAS_QA_LOADTEST_TEST_DATA_FILE_015.csv">
+      <Tables>
+        <DataSourceTable Name="DAS_QA_LOADTEST_TEST_DATA_FILE_015#csv" SelectColumns="SelectAllColumns" AccessMethod="DoNotMoveCursor" />
+      </Tables>
+    </DataSource>
+    <DataSource Name="DataSource6" Provider="Microsoft.VisualStudio.TestTools.DataSource.CSV" Connection="C:\ESFA_DAS_QA_LOADTEST_TEST_DATA_FILES\DAS_QA_LOADTEST_TEST_DATA_FILE_006.csv">
+      <Tables>
+        <DataSourceTable Name="DAS_QA_LOADTEST_TEST_DATA_FILE_006#csv" SelectColumns="SelectAllColumns" AccessMethod="Sequential" />
+      </Tables>
+    </DataSource>
+    <DataSource Name="DataSource5" Provider="Microsoft.VisualStudio.TestTools.DataSource.CSV" Connection="C:\ESFA_DAS_QA_LOADTEST_TEST_DATA_FILES\DAS_QA_LOADTEST_TEST_DATA_FILE_005.csv">
+      <Tables>
+        <DataSourceTable Name="DAS_QA_LOADTEST_TEST_DATA_FILE_005#csv" SelectColumns="SelectAllColumns" AccessMethod="DoNotMoveCursor" />
+      </Tables>
+    </DataSource>
+  </DataSources>
+  <ContextParameters>
+    <ContextParameter Name="FirstName" Value="" />
+    <ContextParameter Name="LastName" Value="" />
+    <ContextParameter Name="wctx" Value="WsFedOwinState=ytIRjybtDVNqeXz2DuyPuHW6NA10o4rMGuXn91Y1H03Z4VMLkaiTakaQfkAjWEDM7rvvZMLL2WVWF6VK8HHoS-wwi-s" />
+    <ContextParameter Name="wres" Value="&lt;t:RequestSecurityTokenResponse xmlns:t=&quot;http://schemas.xmlsoap.org/ws/2005/02/trust&quot;&gt;&lt;t:Lifetime&gt;&lt;wsu:Created xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;2019-10-01T08:21:16.170Z&lt;/wsu:Created&gt;&lt;wsu:Expires xmlns:wsu=&quot;http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd&quot;&gt;2019-10-01T16:21:16.170Z&lt;/wsu:Expires&gt;&lt;/t:Lifetime&gt;&lt;wsp:AppliesTo xmlns:wsp=&quot;http://schemas.xmlsoap.org/ws/2004/09/policy&quot;&gt;&lt;wsa:EndpointReference xmlns:wsa=&quot;http://www.w3.org/2005/08/addressing&quot;&gt;&lt;wsa:Address&gt;https://pp-pas.apprenticeships.education.gov.uk&lt;/wsa:Address&gt;&lt;/wsa:EndpointReference&gt;&lt;/wsp:AppliesTo&gt;&lt;t:RequestedSecurityToken&gt;&lt;saml:Assertion MajorVersion=&quot;1&quot; MinorVersion=&quot;1&quot; AssertionID=&quot;_e073fb80-8e06-4323-9dab-4fbb6afe3f37&quot; Issuer=&quot;http://adfs.preprod.skillsfunding.service.gov.uk/adfs/services/trust&quot; IssueInstant=&quot;2019-10-01T08:21:16.180Z&quot; xmlns:saml=&quot;urn:oasis:names:tc:SAML:1.0:assertion&quot;&gt;&lt;saml:Conditions NotBefore=&quot;2019-10-01T08:21:16.170Z&quot; NotOnOrAfter=&quot;2019-10-01T16:21:16.170Z&quot;&gt;&lt;saml:AudienceRestrictionCondition&gt;&lt;saml:Audience&gt;https://pp-pas.apprenticeships.education.gov.uk&lt;/saml:Audience&gt;&lt;/saml:AudienceRestrictionCondition&gt;&lt;/saml:Conditions&gt;&lt;saml:AttributeStatement&gt;&lt;saml:Subject&gt;&lt;saml:SubjectConfirmation&gt;&lt;saml:ConfirmationMethod&gt;urn:oasis:names:tc:SAML:1.0:cm:bearer&lt;/saml:ConfirmationMethod&gt;&lt;/saml:SubjectConfirmation&gt;&lt;/saml:Subject&gt;&lt;saml:Attribute AttributeName=&quot;upn&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/ws/2005/05/identity/claims&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;ISP-10000291s&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;ukprn&quot; AttributeNamespace=&quot;http://schemas.portal.com&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;10000291&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;service&quot; AttributeNamespace=&quot;http://schemas.portal.com&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;DAA&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;displayname&quot; AttributeNamespace=&quot;http://schemas.portal.com&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;SFSTEST 10000291&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;name&quot; AttributeNamespace=&quot;http://schemas.xmlsoap.org/ws/2005/05/identity/claims&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;SFSTEST 10000291&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;saml:Attribute AttributeName=&quot;mail&quot; AttributeNamespace=&quot;http://schemas.portal.com&quot; a:OriginalIssuer=&quot;https://pplogon.fasst.org.uk/Login/samlIdp&quot; xmlns:a=&quot;http://schemas.xmlsoap.org/ws/2009/09/identity/claims&quot;&gt;&lt;saml:AttributeValue&gt;oattestuser+10000291@gmail.com&lt;/saml:AttributeValue&gt;&lt;/saml:Attribute&gt;&lt;/saml:AttributeStatement&gt;&lt;saml:AuthenticationStatement AuthenticationMethod=&quot;urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport&quot; AuthenticationInstant=&quot;2019-10-01T08:21:12.786Z&quot;&gt;&lt;saml:Subject&gt;&lt;saml:SubjectConfirmation&gt;&lt;saml:ConfirmationMethod&gt;urn:oasis:names:tc:SAML:1.0:cm:bearer&lt;/saml:ConfirmationMethod&gt;&lt;/saml:SubjectConfirmation&gt;&lt;/saml:Subject&gt;&lt;/saml:AuthenticationStatement&gt;&lt;ds:Signature xmlns:ds=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;&lt;ds:SignedInfo&gt;&lt;ds:CanonicalizationMethod Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot; /&gt;&lt;ds:SignatureMethod Algorithm=&quot;http://www.w3.org/2001/04/xmldsig-more#rsa-sha256&quot; /&gt;&lt;ds:Reference URI=&quot;#_e073fb80-8e06-4323-9dab-4fbb6afe3f37&quot;&gt;&lt;ds:Transforms&gt;&lt;ds:Transform Algorithm=&quot;http://www.w3.org/2000/09/xmldsig#enveloped-signature&quot; /&gt;&lt;ds:Transform Algorithm=&quot;http://www.w3.org/2001/10/xml-exc-c14n#&quot; /&gt;&lt;/ds:Transforms&gt;&lt;ds:DigestMethod Algorithm=&quot;http://www.w3.org/2001/04/xmlenc#sha256&quot; /&gt;&lt;ds:DigestValue&gt;ZoMpBRnIeNqFMHxsVLCO+Kih6DOtIKF93H6EgJVEfn0=&lt;/ds:DigestValue&gt;&lt;/ds:Reference&gt;&lt;/ds:SignedInfo&gt;&lt;ds:SignatureValue&gt;SE7zlo6XRNMBORLJgZllrjrUx4g744ckiD94SQZmORhp4jvQC2oDQEZ17k6fhLKGr9vDy9eQzby7xhLurrsUZEfBZIeDipuFmTQSGrpu4w0Nn/70QxwW5w2qWQW4aVykWsaxpJ4ZwwtSpXxUVXQg5Q8t+zc6PxkgQ3QU1W1+c8R2mbM8IeaJOylc80Xifoh2ecVlKOkZJ6LyUxncsBZVl+4YsMMma1Dcu7PpLbRsYgF5iby4r8NpzNfjw6L+xDYYH02t6Dp5lEMocg9ejtG/j8Qbll8Tj33FSJklkEaAGbY4IiuDsrALZpr2trzwiKEzFyKcZgY8D3b4w7QvsKzeCg==&lt;/ds:SignatureValue&gt;&lt;KeyInfo xmlns=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;&lt;X509Data&gt;&lt;X509Certificate&gt;MIIDDjCCAfagAwIBAgIQVu3rHgUAyaNM353xrulvYDANBgkqhkiG9w0BAQsFADBDMUEwPwYDVQQDEzhBREZTIFNpZ25pbmcgLSBhZGZzLnByZXByb2Quc2tpbGxzZnVuZGluZy5zZXJ2aWNlLmdvdi51azAeFw0xODExMjExMjM3MTJaFw0yMDExMjAxMjM3MTJaMEMxQTA/BgNVBAMTOEFERlMgU2lnbmluZyAtIGFkZnMucHJlcHJvZC5za2lsbHNmdW5kaW5nLnNlcnZpY2UuZ292LnVrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqkFOYtkoyM+korIURnmrhFWCsSeikmNXfg9DOoB5mzFleWlkQ4vPT375lo9q+rc3hKfEjIsVQIKrjVJjhYThO9Dct04sV5funwYncSDtd+IU1wQbNaYM05fnmYTty7qAL8OjcPwO+YgMmz3NWS5ahcxFtpCI4TuhZONP28MhUJXjlzkZSi0PM+kMu14vXJh8u0Iii/7OQ7eNQWM83Cd5Hd5PB/ci+ThvPnbMXEKCfhqbNXBHlBFfszFHec4FLRRhdnDxZwnK/CRRaSEE3tViYY7Gccdl+fZi87oSI3PjQJhNKZ2jdzHPXYtjlCOM3v/9+trDQMt9kzDhRWZ00khu+wIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQBE9066fbUb+10sJZtuRZr+1oh6f/5ONYb9mMPkRZuO+Sxof5XL+wjPSQFqtMrcHOfm3M6Y5hnsdpFXlvW1ymq2a94Do5nB+X97LUFLlAVU+U6VGbUw1T6w8KSA5wuuxcPl3CgVwb+XnOQXBW0FDaLGqMWGnctaGeO7lF74QttXbtZTm4GXjsV0R+TU3DjddnpG4yzSs3BnBZowOepdq85vTjpJMOOiEp4WKWshEOTqlOXl2+8a09ZTW09AtRjDelIRkDqU5gOEIK8cuNhCspoTcFZGPN03w0IYq36mBIO4sq/uUYNNH6jRXNoPr4a4LLB7WbyDeOWgKnbXxUwlg2Hi&lt;/X509Certificate&gt;&lt;/X509Data&gt;&lt;/KeyInfo&gt;&lt;/ds:Signature&gt;&lt;/saml:Assertion&gt;&lt;/t:RequestedSecurityToken&gt;&lt;t:TokenType&gt;urn:oasis:names:tc:SAML:1.0:assertion&lt;/t:TokenType&gt;&lt;t:RequestType&gt;http://schemas.xmlsoap.org/ws/2005/02/trust/Issue&lt;/t:RequestType&gt;&lt;t:KeyType&gt;http://schemas.xmlsoap.org/ws/2005/05/identity/NoProofKey&lt;/t:KeyType&gt;&lt;/t:RequestSecurityTokenResponse&gt;" />
+  </ContextParameters>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response Time Goal" Description="Validates that the response time for the request is less than or equal to the response time goal as specified on the request.  Response time goals of zero will be ignored." Level="Low" ExectuionOrder="AfterDependents">
+      <RuleParameters>
+        <RuleParameter Name="Tolerance" Value="0" />
+      </RuleParameters>
+    </ValidationRule>
+  </ValidationRules>
+  <WebTestPlugins>
+    <WebTestPlugin Classname="ESFA.DAS.QA.LOADTEST.PLUGINS.GenerateUniqueFirstName, ESFA.DAS.QA.LOADTEST.PROJECT.008.PLUGINS.PROD, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="Generate Unique First Name" Description="Generates a unique first name with every iteration">
+      <RuleParameters>
+        <RuleParameter Name="ContextParamTarget" Value="Firstname" />
+      </RuleParameters>
+    </WebTestPlugin>
+    <WebTestPlugin Classname="ESFA.DAS.QA.LOADTEST.PLUGINS.GenerateUniqueLastName, ESFA.DAS.QA.LOADTEST.PROJECT.008.PLUGINS.PROD, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="Generate Unique Last Name" Description="Generates a unique last name with every iteration">
+      <RuleParameters>
+        <RuleParameter Name="ContextParamTarget" Value="Lastname" />
+      </RuleParameters>
+    </WebTestPlugin>
+    <WebTestPlugin Classname="ESFA.DAS.QA.LOADTEST.PLUGINS.GenerateUniqueLearnerNumber, ESFA.DAS.QA.LOADTEST.PROJECT.008.PLUGINS.PROD, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="Generate Unique Learner Number" Description="Generates a unique for the new user with every iteration">
+      <RuleParameters>
+        <RuleParameter Name="ContextParamTarget" Value="ULN" />
+      </RuleParameters>
+    </WebTestPlugin>
+  </WebTestPlugins>
+</WebTest>

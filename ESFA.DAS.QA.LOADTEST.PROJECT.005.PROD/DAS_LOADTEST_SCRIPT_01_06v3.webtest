@@ -1,0 +1,836 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="DAS_LOADTEST_SCRIPT_01_06v3" Id="8589a659-cb44-421f-a916-c9290953c948" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="default" StopOnError="False" RecordedResultFile="WebTest1.2d12a7cb-b600-47a5-9843-f92c24017744.rec.webtestresult" ResultsLocale="">
+  <Items>
+    <Comment CommentText="SCRIPT STEP 01 - OPEN CREATE EMPLOYER ACCOUNT PAGE" />
+    <TransactionTimer Name="S01_06_T01_OPEN_CREATE_EMPLOYER_ACCOUNT_LANDING_PAGE">
+      <Items>
+        <Request Method="GET" Guid="3295532b-4eaf-44b0-8c00-1a52888e6ecf" Version="1.1" Url="https://pp-eas.apprenticeships.education.gov.uk/" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://accounts.pp-eas.apprenticeships.education.gov.uk/service/index" ReportingName="" IgnoreHttpStatusCode="False" />
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 02 - CREATE EMPLOYER ACCOUNT - SELECT CREATE ACCOUNT BUTTON" />
+    <TransactionTimer Name="S01_06_T02_EMPLOYER_ACCOUNT_PAGE_SELECT_CREATE_ACCOUNT_BUTTON">
+      <Items>
+        <Request Method="GET" Guid="20fd94b8-2ff5-4716-9531-dd21ea154169" Version="1.1" Url="https://accounts.pp-eas.apprenticeships.education.gov.uk/service/register" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pp-login.apprenticeships.education.gov.uk/account/register?clientId=easaccpp&amp;returnurl=https://accounts.pp-eas.apprenticeships.education.gov.uk/service/register/new" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://accounts.pp-eas.apprenticeships.education.gov.uk/service/index" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <CorrelationExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam3.returnUrl" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="?returnUrl=" />
+                <RuleParameter Name="EndsWith" Value="&quot;" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam4.returnUrl" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="?returnUrl=" />
+                <RuleParameter Name="EndsWith" Value="&quot;" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+          </CorrelationExtractionRules>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 03 - SET UP USER PAGE - SELECT SET ME UP BUTTON" />
+    <TransactionTimer Name="S01_06_T03_SET_UP_AS_A_USER_PAGE_SELECT_SET_ME_UP_BUTTON">
+      <Items>
+        <Request Method="POST" Guid="45d3cab4-f528-42f7-bab8-ea7e26161ed0" Version="1.1" Url="https://pp-login.apprenticeships.education.gov.uk/identity/employer/register" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pp-login.apprenticeships.education.gov.uk/identity/connect/authorize?client_id=idp&amp;redirect_uri=https%3a%2f%2fpp-login.apprenticeships.education.gov.uk%2f&amp;response_mode=form_post&amp;response_type=id_token+token&amp;scope=openid+profile&amp;state=OpenIdConnect.AuthenticationProperties%3dpVpOnOg9rDMNQVGqLwy7FuEWDIPRN2hnkAbUWeJkW10LHvwcm-HANCptE0OSqRSxGXe1Ibv9tPBf_PKv1jpuCJ5YGHdvn6ZBWtdreSZ6-M1VYGq0FpF06VRPMFQRrCHgb8HmxJSAWoBW1WN4BVnLpM7ywWmwJTNTxHcwQGyR0v457c3Skw6dw2v_0wQ7UDzjf4sekooQ-zb-_luPo8gNme_gswrP9ZtLhucS6mxrPLSkfH_or174_Ebr3yPq6oi5K0yCaA9Zg2IRoRpOWSg2OCZsY9AsQrROhWZlTmaupnE&amp;nonce=637014758731267601.ZjA3YjM5NzItMGNlYS00Njk4LTg4MDMtMzc3NDZlYTk5NWYxZjk0MGM4NGQtYWYzMC00NTZjLWJkMTgtZmYxYTIyODZmYmUw" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/account/register?clientId=easaccpp&amp;returnurl=https://accounts.pp-eas.apprenticeships.education.gov.uk/service/register/new" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <CorrelationExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam3.id_token" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xA;" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam4.access_token" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xA;" />
+                <RuleParameter Name="Index" Value="1" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam5.token_type" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xA;" />
+                <RuleParameter Name="Index" Value="2" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam6.expires_in" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xA;" />
+                <RuleParameter Name="Index" Value="3" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam7.scope" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xA;" />
+                <RuleParameter Name="Index" Value="4" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam8.state" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xA;" />
+                <RuleParameter Name="Index" Value="5" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+          </CorrelationExtractionRules>
+          <QueryStringParameters>
+            <QueryStringParameter Name="returnUrl" Value="https%3a%2f%2faccounts.pp-eas.apprenticeships.education.gov.uk%2fservice%2fregister%2fnew" RecordedValue="https%3a%2f%2faccounts.pp-eas.apprenticeships.education.gov.uk%2fservice%2fregister%2fnew" CorrelationBinding="{{QueryStringParam4.returnUrl}}" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+          <FormPostHttpBody>
+            <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="Ekk8XDBKtPqRl8ITS-3skEblnVQmAVny628E8fYNgH--0pXg9t6wpzXfPBWSISdUUo5YsBBypATCZOXbyPGvvz0NDqm-yha7VWyWqp9WQXE1" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="ClientId" Value="{{$HIDDEN1.ClientId}}" RecordedValue="easaccpp" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="ReturnUrl" Value="{{$HIDDEN1.ReturnUrl}}" RecordedValue="https://accounts.pp-eas.apprenticeships.education.gov.uk/service/register/new" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="FirstName" Value="{{DataSource11.DAS_QA_LOADTEST_TEST_DATA_FILE_011#csv.Employer_Firstname}}" RecordedValue="Nft" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="LastName" Value="{{LastName}}" RecordedValue="Testuseraaaaaaaafa" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="Email" Value="{{Email}}" RecordedValue="nft.testuseraaaaaaaafa@testemail.com" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="Password" Value="{{DataSource11.DAS_QA_LOADTEST_TEST_DATA_FILE_011#csv.Employer_Password}}" RecordedValue="Password1" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="ConfirmPassword" Value="{{DataSource11.DAS_QA_LOADTEST_TEST_DATA_FILE_011#csv.Employer_Password}}" RecordedValue="Password1" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="HasAcceptedTermsAndConditions" Value="{{$HIDDEN1.HasAcceptedTermsAndConditions}}" RecordedValue="true" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+        <Request Method="POST" Guid="f305a1b3-6cd9-4ffe-841e-62646c39b48f" Version="1.1" Url="https://pp-login.apprenticeships.education.gov.uk/" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pp-login.apprenticeships.education.gov.uk/account/confirm" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/connect/authorize?client_id=idp&amp;redirect_uri=https%3a%2f%2fpp-login.apprenticeships.education.gov.uk%2f&amp;response_mode=form_post&amp;response_type=id_token+token&amp;scope=openid+profile&amp;state=OpenIdConnect.AuthenticationProperties%3dpVpOnOg9rDMNQVGqLwy7FuEWDIPRN2hnkAbUWeJkW10LHvwcm-HANCptE0OSqRSxGXe1Ibv9tPBf_PKv1jpuCJ5YGHdvn6ZBWtdreSZ6-M1VYGq0FpF06VRPMFQRrCHgb8HmxJSAWoBW1WN4BVnLpM7ywWmwJTNTxHcwQGyR0v457c3Skw6dw2v_0wQ7UDzjf4sekooQ-zb-_luPo8gNme_gswrP9ZtLhucS6mxrPLSkfH_or174_Ebr3yPq6oi5K0yCaA9Zg2IRoRpOWSg2OCZsY9AsQrROhWZlTmaupnE&amp;nonce=637014758731267601.ZjA3YjM5NzItMGNlYS00Njk4LTg4MDMtMzc3NDZlYTk5NWYxZjk0MGM4NGQtYWYzMC00NTZjLWJkMTgtZmYxYTIyODZmYmUw" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <CorrelationExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam9.__RequestVerificationToken" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+          </CorrelationExtractionRules>
+          <FormPostHttpBody>
+            <FormPostParameter Name="id_token" Value="{{$HIDDEN1.id_token}}" RecordedValue="eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5CT2ZZUjM1ZUhGTTNMeDdfbkV3ZDFKdHBOayIsImtpZCI6Im5CT2ZZUjM1ZUhGTTNMeDdfbkV3ZDFKdHBOayJ9.eyJpc3MiOiJodHRwczovL3BwLWxvZ2luLmFwcHJlbnRpY2VzaGlwcy5lZHVjYXRpb24uZ292LnVrL2lkZW50aXR5IiwiYXVkIjoiaWRwIiwiZXhwIjoxNTY1ODc5MzczLCJuYmYiOjE1NjU4NzkwNzMsIm5vbmNlIjoiNjM3MDE0NzU4NzMxMjY3NjAxLlpqQTNZak01TnpJdE1HTmxZUzAwTmprNExUZzRNRE10TXpjM05EWmxZVGs1TldZeFpqazBNR000TkdRdFlXWXpNQzAwTlRaakxXSmtNVGd0Wm1ZeFlUSXlPRFptWW1VdyIsImlhdCI6MTU2NTg3OTA3MywiYXRfaGFzaCI6ImI4Um14Uk44T1c3RVhvdVdXVjRhQWciLCJzdWIiOiIwZDFlYmYzZS00NTBlLTQ5ZGEtOWYyMi03YzI1MzM2MWEyN2EiLCJhdXRoX3RpbWUiOjE1NjU4NzkwNzMsImlkcCI6Imlkc3J2IiwiaHR0cDovL2Rhcy9lbXBsb3llci9pZGVudGl0eS9jbGFpbXMvaWQiOiIwZDFlYmYzZS00NTBlLTQ5ZGEtOWYyMi03YzI1MzM2MWEyN2EiLCJodHRwOi8vZGFzL2VtcGxveWVyL2lkZW50aXR5L2NsYWltcy9lbWFpbF9hZGRyZXNzIjoibmZ0LnRlc3R1c2VyYWFhYWFhYWFmYUB0ZXN0ZW1haWwuY29tIiwiaHR0cDovL2Rhcy9lbXBsb3llci9pZGVudGl0eS9jbGFpbXMvZ2l2ZW5fbmFtZSI6Ik5mdCIsImh0dHA6Ly9kYXMvZW1wbG95ZXIvaWRlbnRpdHkvY2xhaW1zL2ZhbWlseV9uYW1lIjoiVGVzdHVzZXJhYWFhYWFhYWZhIiwiaHR0cDovL2Rhcy9lbXBsb3llci9pZGVudGl0eS9jbGFpbXMvZGlzcGxheV9uYW1lIjoiTmZ0IFRlc3R1c2VyYWFhYWFhYWFmYSIsImh0dHA6Ly9kYXMvZW1wbG95ZXIvaWRlbnRpdHkvY2xhaW1zL3JlcXVpcmVzX3ZlcmlmaWNhdGlvbiI6IlRydWUiLCJhbXIiOlsicGFzc3dvcmQiXX0.jdcUzOAO7YIpwSPHaFj1iXrvct140rKe0mM5iQQcyvU7gqQgXCA4P0Pc9fpDi9fVJVT68_QQn_BQk3-9nVK_2mDgudD8mFZ354b1jUX8Q2xUD6jmtvK_4r9kBskppM2pm-0UCXXWOF4AXNMUvoxh4ej_2nFQG8xbe17yqSNL4hKkYeTUfoVwSnlmF225sYjqBaU8fK05qfXGczVjLfOV2pLZG4vWvJtXlKJkEMhCrjYOIPyiKWGxgfC_U32FC88frhFBIg9MdsRKp1uciyMYju8nYOVNfj6CzsUxT64SosLNJ2R30Wm0mylF1AbIr1ZWwFKUZeD11WugKONPgb0xeg" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="access_token" Value="{{$HIDDEN1.access_token}}" RecordedValue="eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Im5CT2ZZUjM1ZUhGTTNMeDdfbkV3ZDFKdHBOayIsImtpZCI6Im5CT2ZZUjM1ZUhGTTNMeDdfbkV3ZDFKdHBOayJ9.eyJpc3MiOiJodHRwczovL3BwLWxvZ2luLmFwcHJlbnRpY2VzaGlwcy5lZHVjYXRpb24uZ292LnVrL2lkZW50aXR5IiwiYXVkIjoiaHR0cHM6Ly9wcC1sb2dpbi5hcHByZW50aWNlc2hpcHMuZWR1Y2F0aW9uLmdvdi51ay9pZGVudGl0eS9yZXNvdXJjZXMiLCJleHAiOjE1NjU4ODI2NzMsIm5iZiI6MTU2NTg3OTA3MywiY2xpZW50X2lkIjoiaWRwIiwic2NvcGUiOlsib3BlbmlkIiwicHJvZmlsZSJdLCJzdWIiOiIwZDFlYmYzZS00NTBlLTQ5ZGEtOWYyMi03YzI1MzM2MWEyN2EiLCJhdXRoX3RpbWUiOjE1NjU4NzkwNzMsImlkcCI6Imlkc3J2IiwiYW1yIjpbInBhc3N3b3JkIl19.Kfu3ombzq2hypGFVmcdyCfj54MBl7269rvDw9wwPY6a8rayTavMdxLoBzTYv3Qur0IHSONVtw40gH9IQjpXRnaRifIQUqk9FPqUQU1_tz-4Xw99LevI9kxdzUxFxyw-6wP3ujzoVp_5AHpjovBpRD4q0jDCp6zt36kFCSlbqmDSWLJi2AjbHBbZ0sUuwLNZ9SjMpd-Wxd8iDo6enbgy3PLYMs6E9tKoG6FSQOxz988rNvCSnvpGtGMIu2GE0mfbX6jvJWM6W8P_I2UKoSZqrJwXu5qCLGYxk395Tm7Wer6LvJ-M-c2DwyG5CcSBfeKO5_2ibjpF8AI8ZQOJMBAbyXw" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="token_type" Value="{{$HIDDEN1.token_type}}" RecordedValue="Bearer" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="expires_in" Value="{{$HIDDEN1.expires_in}}" RecordedValue="3600" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="scope" Value="{{$HIDDEN1.scope}}" RecordedValue="openid profile" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="state" Value="{{$HIDDEN1.state}}" RecordedValue="OpenIdConnect.AuthenticationProperties=pVpOnOg9rDMNQVGqLwy7FuEWDIPRN2hnkAbUWeJkW10LHvwcm-HANCptE0OSqRSxGXe1Ibv9tPBf_PKv1jpuCJ5YGHdvn6ZBWtdreSZ6-M1VYGq0FpF06VRPMFQRrCHgb8HmxJSAWoBW1WN4BVnLpM7ywWmwJTNTxHcwQGyR0v457c3Skw6dw2v_0wQ7UDzjf4sekooQ-zb-_luPo8gNme_gswrP9ZtLhucS6mxrPLSkfH_or174_Ebr3yPq6oi5K0yCaA9Zg2IRoRpOWSg2OCZsY9AsQrROhWZlTmaupnE" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 04 - CONFIRM YOUR IDENTITY PAGE - SELECT CONTINUE BUTTON" />
+    <TransactionTimer Name="S01_06_T04_CONFIRM_YOUR_IDENTITY_PAGE_SELECT_CONTINUE_BUTTON">
+      <Items>
+        <Request Method="POST" Guid="5eb442f7-ee39-4fe8-b335-74d9c7904b07" Version="1.1" Url="https://pp-login.apprenticeships.education.gov.uk/account/confirm" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://accounts.pp-eas.apprenticeships.education.gov.uk/accounts/getApprenticeshipFunding" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/account/confirm" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <CorrelationExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam10.__RequestVerificationToken" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xA;" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam11.choice" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                <RuleParameter Name="Index" Value="1" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam12.choice" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="want-to-add-paye-scheme" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+          </CorrelationExtractionRules>
+          <FormPostHttpBody>
+            <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="9jY0icg-Fp0qjLCrcTBGDWqxsb5NVKxwdwC2a8X6ZlUKV1ZHNqyuA84nZVTAM-tn1q5mcAhV4-JdgSzFkAfe_IIg6X8UnymyyIpK0-Gf0EQvOb0QFg6AfkLQed7ZUnDGPqAW-7gtjv_Ce4PKufTvXg2" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="AccessCode" Value="{{DataSource10.DAS_QA_LOADTEST_TEST_DATA_FILE_010#csv.Gateway_Access_Code}}" RecordedValue="ABC123" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 05 - GET FUNDING PAGE - SELECT CONTINUE BUTTON" />
+    <TransactionTimer Name="S01_06_T05_GET_FUNDING_PAGE_SELECT_CONTINUE_BUTTON">
+      <Items>
+        <Request Method="POST" Guid="dda4b1f8-8840-4203-beb1-feeda8a930a9" Version="1.1" Url="https://accounts.pp-eas.apprenticeships.education.gov.uk/accounts/getApprenticeshipFunding" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://accounts.pp-eas.apprenticeships.education.gov.uk/accounts/gatewayInform" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://accounts.pp-eas.apprenticeships.education.gov.uk/accounts/getApprenticeshipFunding" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <FormPostHttpBody>
+            <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="xU9f-4zB06a_JDEeDKuP09BNA4sMZi3_qzE0eT6Lx7LIM8ufjBDM7JTzXPQ1rtAn9uTMmPLb9cvokzhmv3sFPPxweiBeABDjdgXZzA4t_ijqlKaorwm9C2qJGJCGr8MOAENc6wLN_bRYq-AbpJUY5Q2" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="choice" Value="2" RecordedValue="2" CorrelationBinding="{{FormPostParam12.choice}}" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 06 - WAYS TO ADD YOUR PAYE SCHEME PAGE - SELECT I WANT OT USE GOVERNMENT GATEWAY - SELECT CONTINUE BUTTON" />
+    <TransactionTimer Name="S01_06_T06_WAYS_TO_ADD_PAGE_GATEWAY_SELECT_CONTINUE_BUTTON">
+      <Items>
+        <Request Method="POST" Guid="5daa856f-244a-4ac7-ae6b-b92ead227013" Version="1.1" Url="https://accounts.pp-eas.apprenticeships.education.gov.uk/accounts/schemes/waysToAdd" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://accounts.pp-eas.apprenticeships.education.gov.uk/accounts/gatewayInform" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://accounts.pp-eas.apprenticeships.education.gov.uk/accounts/schemes/waysToAdd" />
+          </Headers>
+          <FormPostHttpBody>
+            <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="9huH9avYSYsZiI9TLfAQ4vpsoUWbUOf-FP-l1XhC0Tz7cF4WqqXptifCTy6z3vg2dPbThkWYtB8FpReMtVnRgnVfX3I7otKnhcXQ3A7DMoOX3O0e4AGjwyw1CG7vbBSBtx_UI6IexeNj2V-SUvFsAg2" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="choice" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam15.choice}}" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 07 - GOVERNMENT GATEWAY DETAILS PAGE - SELECT CONTINUE BUTTON" />
+    <TransactionTimer Name="S01_06_T07_GATEWAY_DETAILS_PAGE_SELECT_CONTINUE_BUTTON">
+      <Items>
+        <Request Method="GET" Guid="fbe9c365-cec1-447e-98c6-0809857d2e76" Version="1.1" Url="https://accounts.pp-eas.apprenticeships.education.gov.uk/accounts/gateway" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://das-alpha-taxservice-mock.herokuapp.com/gg/sign-in?continue=/oauth/grantscope?auth_id=471216747082803944&amp;origin=oauth-frontend" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://accounts.pp-eas.apprenticeships.education.gov.uk/accounts/gatewayInform" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="auth_id" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="auth_id%3D" />
+                <RuleParameter Name="EndsWith" Value="&amp;amp;origin" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="ExtractRandomMatch" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="SearchInHeaders" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="continue" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="action=&quot;/gg/sign-in?continue=" />
+                <RuleParameter Name="EndsWith" Value="&amp;amp;origin=oauth-frontend&quot;&gt;" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="ExtractRandomMatch" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="SearchInHeaders" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <CorrelationExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam1.continue" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="?continue=" />
+                <RuleParameter Name="EndsWith" Value="&amp;" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam2.origin" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="&amp;amp;origin=" />
+                <RuleParameter Name="EndsWith" Value="&quot;" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam2.password" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="for=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot;&gt;Pas" />
+                <RuleParameter Name="Index" Value="1" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam5.continue" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="?continue=" />
+                <RuleParameter Name="EndsWith" Value="&amp;" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="QueryStringParam6.origin" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="&amp;amp;origin=" />
+                <RuleParameter Name="EndsWith" Value="&quot;" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam13.password" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="for=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot;&gt;Pas" />
+                <RuleParameter Name="Index" Value="1" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+          </CorrelationExtractionRules>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 08 - GOVERNMENT GATEWAY SIGN IN PAGE - SELECT SIGN IN BUTTON" />
+    <TransactionTimer Name="S01_06_T08_GATEWAY_SIGN_IN_PAGE_SELECT_SIGN_IN_BUTTON">
+      <Items>
+        <Request Method="POST" Guid="2583c346-9b5a-4bd5-b4b1-d5dbef8b0530" Version="1.1" Url="https://das-alpha-taxservice-mock.herokuapp.com/gg/sign-in" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://accounts.pp-eas.apprenticeships.education.gov.uk/accounts/organisations/search" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://das-alpha-taxservice-mock.herokuapp.com/gg/sign-in?continue=/oauth/grantscope?auth_id={{auth_id}}&amp;origin=oauth-frontend" />
+          </Headers>
+          <QueryStringParameters>
+            <QueryStringParameter Name="continue" Value="{{continue}}" RecordedValue="%2Foauth%2Fgrantscope%3Fauth_id%3D471216747082803944" CorrelationBinding="{{QueryStringParam5.continue}}" UrlEncode="False" UseToGroupResults="False" />
+            <QueryStringParameter Name="origin" Value="oauth-frontend" RecordedValue="oauth-frontend" CorrelationBinding="{{QueryStringParam6.origin}}" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+          <FormPostHttpBody>
+            <FormPostParameter Name="continue" Value="{{continue}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="userId" Value="{{DataSource03.DAS_QA_LOADTEST_TEST_DATA_FILE_003#csv.GATEWAY_USERID}}" RecordedValue="GDSUser60500" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="password" Value="{{DataSource03.DAS_QA_LOADTEST_TEST_DATA_FILE_003#csv.GATEWAY_PASSWORD}}" RecordedValue="password" CorrelationBinding="{{FormPostParam13.password}}" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 09 - SEARCH FOR ORGANISATION PAGE - SELECT SEARCH BUTTON" />
+    <TransactionTimer Name="S01_06_T09_SEARCH_FOR_ORGANISATION_PAGE_SELECT_SEARCH_BUTTON">
+      <Items>
+        <Request Method="POST" Guid="23b2c323-e31a-4731-862b-6906d81e9a73" Version="1.1" Url="https://accounts.pp-eas.apprenticeships.education.gov.uk/accounts/organisations/search" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://accounts.pp-eas.apprenticeships.education.gov.uk/accounts/organisations/search/results?searchTerm=SAINSBURY" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://accounts.pp-eas.apprenticeships.education.gov.uk/accounts/organisations/search" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <CorrelationExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam14.DateOfInception" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot;/&gt;&#xD;&#xA;" />
+                <RuleParameter Name="Index" Value="5" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam15.ReferenceNumber" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot;/&gt;&#xD;&#xA;" />
+                <RuleParameter Name="Index" Value="6" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam16.Type" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot;  /&gt;" />
+                <RuleParameter Name="Index" Value="1" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam17.Address" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot;/&gt;&#xD;&#xA;" />
+                <RuleParameter Name="Index" Value="9" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+          </CorrelationExtractionRules>
+          <FormPostHttpBody>
+            <FormPostParameter Name="searchTerm" Value="SAINSBURY" RecordedValue="SAINSBURY" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Request Method="POST" Guid="23b2c323-e31a-4731-862b-6906d81e9a73" Version="1.1" Url="https://accounts.pp-eas.apprenticeships.education.gov.uk/accounts/organisations/search" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://accounts.pp-eas.apprenticeships.education.gov.uk/accounts/organisations/search/results?searchTerm=SAINSBURY" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://accounts.pp-eas.apprenticeships.education.gov.uk/accounts/organisations/search" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam14.DateOfInception" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;/&gt;&#xD;&#xA;" />
+            <RuleParameter Name="Index" Value="5" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam15.ReferenceNumber" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;/&gt;&#xD;&#xA;" />
+            <RuleParameter Name="Index" Value="6" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam16.Type" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;  /&gt;" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam17.Address" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;/&gt;&#xD;&#xA;" />
+            <RuleParameter Name="Index" Value="9" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <FormPostHttpBody>
+        <FormPostParameter Name="searchTerm" Value="SAINSBURY" RecordedValue="SAINSBURY" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Comment CommentText="SCRIPT STEP 10 - SELECT YOUR ORGANISATION PAGE - SELECT RESULT LINK" />
+    <TransactionTimer Name="S01_06_T10_SELECT_YOUR_ORGANISATION_PAGE_SELECT_RESULT_LINK">
+      <Items>
+        <Request Method="POST" Guid="e145f8f6-eaad-43ea-b52b-e8e207fc9014" Version="1.1" Url="https://accounts.pp-eas.apprenticeships.education.gov.uk/accounts/organisations/search/confirm" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://accounts.pp-eas.apprenticeships.education.gov.uk/accounts/summary" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://accounts.pp-eas.apprenticeships.education.gov.uk/accounts/organisations/search/results?searchTerm=SAINSBURY" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <CorrelationExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam18.__RequestVerificationToken" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+          </CorrelationExtractionRules>
+          <FormPostHttpBody>
+            <FormPostParameter Name="DateOfInception" Value="{{$HIDDEN1.DateOfInception}}" RecordedValue="8/10/2009 12:00:00 AM" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="ReferenceNumber" Value="{{$HIDDEN1.ReferenceNumber}}" RecordedValue="06986840" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="Sector" Value="{{$HIDDEN1.Sector}}" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="Type" Value="{{$HIDDEN1.Type}}" RecordedValue="CompaniesHouse" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="Name" Value="{{$HIDDEN1.Name}}" RecordedValue="SAINSBURY &amp; SAINSBURY  LIMITED" CorrelationBinding="" UrlEncode="True" />
+            <FormPostParameter Name="Address" Value="{{$HIDDEN1.Address}}" RecordedValue="16-18  Shelton Street, London, WC2H 9JL" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 11 - CHECK YOUR DETAILS PAGE - SELECT DETAILS CORRECT BUTTON" />
+    <TransactionTimer Name="S01_06_T11_CHECK_YOUR_DETAILS_PAGE_SELECT_DETAILS_CORRECT_BUTTON">
+      <Items>
+        <Request Method="POST" Guid="c047151a-8a96-4080-83e5-ea92eef95852" Version="1.1" Url="https://accounts.pp-eas.apprenticeships.education.gov.uk/accounts/create" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://accounts.pp-eas.apprenticeships.education.gov.uk/accounts/summary" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="AccountID" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="'acc': '" />
+                <RuleParameter Name="EndsWith" Value="'," />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="ExtractRandomMatch" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="SearchInHeaders" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="AgreementID" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="[A-Z0-9]/agreements/" />
+                <RuleParameter Name="EndsWith" Value="/sign-your-agreement" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="True" />
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="ExtractRandomMatch" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="SearchInHeaders" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <FormPostHttpBody>
+            <FormPostParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="07l3CHQUfuz0-t7C4SBNgmdHHwTubzJC6v1ScBc0fFa9aFxwCtyslR61zs5cjxjyP09gE_yb0ZdqTJG9uJQ0arDxx1CmtAUO2lKVx7Jp7qp5PSCq3SSORvAKtCJ5CILCtWhG1wFgvs-6QkBz2p-OnQ2" CorrelationBinding="" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 12 -YOUR AGREEMENT PAGE - SELECT CONTINUE BUTTON" />
+    <TransactionTimer Name="S01_06_T12_YOUR_AGREEMENT_PAGE_SELECT_CONTINUE_BUTTON">
+      <Items>
+        <Request Method="GET" Guid="5caf408d-4b5c-4234-98b7-33a63fcd63fa" Version="1.1" Url="https://accounts.pp-eas.apprenticeships.education.gov.uk/accounts/{{AccountID}}/agreements/{{AgreementID}}/sign-your-agreement" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://accounts.pp-eas.apprenticeships.education.gov.uk/accounts/9GG4GN/agreements/6PNKKG/about-your-agreement" />
+          </Headers>
+          <ExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="Required" Value="True" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="RequestVerificationToken1" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+                <RuleParameter Name="Index" Value="0" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+          </ExtractionRules>
+          <CorrelationExtractionRules>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractFormField, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam1.choice" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="Name" Value="want-to-sign" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+                <RuleParameter Name="Index" Value="0" />
+              </RuleParameters>
+            </ExtractionRule>
+            <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam20.choice" DisplayName="" Description="">
+              <RuleParameters>
+                <RuleParameter Name="StartsWith" Value=" id=&quot;" />
+                <RuleParameter Name="EndsWith" Value="&quot; sty" />
+                <RuleParameter Name="Index" Value="24" />
+                <RuleParameter Name="IgnoreCase" Value="False" />
+                <RuleParameter Name="UseRegularExpression" Value="False" />
+                <RuleParameter Name="HtmlDecode" Value="True" />
+                <RuleParameter Name="Required" Value="False" />
+              </RuleParameters>
+            </ExtractionRule>
+          </CorrelationExtractionRules>
+          <QueryStringParameters>
+            <QueryStringParameter Name="__RequestVerificationToken" Value="{{$HIDDEN1.__RequestVerificationToken}}" RecordedValue="N8Bm4OVbskZfTE1CqgCZ7qfD_PO3X7P0snmiuls8dJMeCuUCCSSaOijloK7EnhlY116cQMrYHsd9aj8-N9qcFy6HoFA9DVgGxxlYv-yrq3ikTs7aukr4ktlepKBX4Z4LFTfBvT3CSbZwPfe6i5jwNg2" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+          </QueryStringParameters>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 13 - ACCEPT AGREEEMENT PAGE - SELECT CONTINUE BUTTON" />
+    <TransactionTimer Name="S01_06_T13_ACCEPT_AGREEEMENT_PAGE_SELECT_CONTINUE_BUTTON">
+      <Items>
+        <Request Method="POST" Guid="79ef1c6b-9324-4648-bd23-776e076bc9a3" Version="1.1" Url="https://accounts.pp-eas.apprenticeships.education.gov.uk/accounts/{{AccountID}}/agreements/{{AgreementID}}/sign" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://accounts.pp-eas.apprenticeships.education.gov.uk/accounts/{{AccountID}}/teams" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://accounts.pp-eas.apprenticeships.education.gov.uk/accounts/{{AccountID}}/agreements/{{AgreementID}}/sign-your-agreement?__RequestVerificationToken={{RequestVerificationToken1}}" />
+          </Headers>
+          <FormPostHttpBody>
+            <FormPostParameter Name="__RequestVerificationToken" Value="{{RequestVerificationToken1}}" RecordedValue="f2fUKVIN2j4nfNE4BS7HjnJGYw3wi_E0ZRojyTzFYxef4FrI3wLGy3kImDHKVOVuKPSSQcRr3OCB7lF1OiGgSHjHbJgQxPdJVy0ZWaWCNKLbT_KttQGmY3ULWIMZ5Dvu2BYrj5g_dRqcWJYsEU3FfQ2" CorrelationBinding="{{FormPostParam19.__RequestVerificationToken}}" UrlEncode="True" />
+            <FormPostParameter Name="choice" Value="2" RecordedValue="2" CorrelationBinding="{{FormPostParam20.choice}}" UrlEncode="True" />
+          </FormPostHttpBody>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 14 - AGREEMENTS SIGNED PAGE - SELECT HOME LINK" />
+    <TransactionTimer Name="S01_06_T14_AGREEMENTS_SIGNED_PAGE_SELECT_HOME_LINK">
+      <Items>
+        <Request Method="GET" Guid="069096ce-1254-4ffb-9889-c3298bea77be" Version="1.1" Url="https://accounts.pp-eas.apprenticeships.education.gov.uk/accounts/XD8JYR/teams" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://accounts.pp-eas.apprenticeships.education.gov.uk/accounts/XD8JYR/teams" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Comment CommentText="SCRIPT STEP 15 - YOUR EMPLOYER ACCOUNT PAGE - SELECT SIGNOUT LINK" />
+    <TransactionTimer Name="S01_06_T15_YOUR_EMPLOYER_ACCOUNT_PAGE_SELECT_SIGNOUT_LINK">
+      <Items>
+        <Request Method="GET" Guid="4f5330bb-d364-481a-a12f-806447c93810" Version="1.1" Url="https://accounts.pp-eas.apprenticeships.education.gov.uk/service/signOut" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pp-login.apprenticeships.education.gov.uk/identity/logout?id=cd2c8988f295abfccf4a263392fcd865" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://accounts.pp-eas.apprenticeships.education.gov.uk/accounts/9GG4GN/teams" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="8cf1a060-a749-4460-8192-aaa90ec60249" Version="1.1" Url="https://recruit.pp-eas.apprenticeships.education.gov.uk/signout-oidc" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/logout?id=cd2c8988f295abfccf4a263392fcd865" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="13620a69-9ca1-4577-bf0e-f225750aeb20" Version="1.1" Url="https://pp-selections.apprenticeships.education.gov.uk/" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pp-login.apprenticeships.education.gov.uk/identity/employer/login?id=967144ea81bf7fc8e4fc44641c549bd2&amp;returnUrl=https%3a%2f%2fpp-login.apprenticeships.education.gov.uk%2fidentity%2fconnect%2fauthorize%3fclient_id%3dempfav%26redirect_uri%3dhttps%253A%252F%252Fpp-selections.apprenticeships.education.gov.uk%252Fsignin-oidc%26response_type%3dcode%26scope%3dopenid%2520profile%26response_mode%3dform_post%26nonce%3d637014760788680215.YmIwZTRmYjgtMTc0OS00NzliLTlkZDQtMGY2ZTI1OTVmODAwNjZmNjY3N2EtNTQzYi00Nzk2LWI0ZjgtMmViMGFkOTAxYmY1%26state%3dCfDJ8OSnSycIn6lCiwd5HwKpI7uQDoIwdIiji16A5Mfg5XR0A7YYz8VckXV8OxeXdzOATMqsybBEqT2I7hom_a2RnIQreuQI-mJj5ozOap2w2EjDMwy7IWJj1rdxw5s4Fd6ByvaREa6w2im2WtOEhhGPILYC4FHQUlGEcaCj58qsTS1n-6YfVRILljRwhgd2hb0IojLqpvC461HFCKw6LGaxxDM3DVNgisBPF1VrC5wa8o1QVF1vW7Gdu1GRSb2B4EMAAJHxXS6OvSPtOPA6IbCCWI0PMTwRK7ryotq0RvmLY4YIgc6PpXJ6pqedRu2kGkPk6BCaXf4JJj_qvbQmdgogGzpoz23b3OZm5bAVrH8kmEFXXfe44Ye7yXR8BBWcgDO2BEDfJkeOhxGCji0zmAG18hWZW66_Gzj1TMcEVrFMv1PM%26x-client-SKU%3dID_NETSTANDARD2_0%26x-client-ver%3d5.3.0.0&amp;clientId=empfav" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/logout?id=cd2c8988f295abfccf4a263392fcd865" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="145fa3c1-afe5-4744-9008-1d8544c551c0" Version="1.1" Url="https://securefunding.pp-eas.apprenticeships.education.gov.uk/signoutcleanup" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pp-login.apprenticeships.education.gov.uk/identity/employer/login?id=0987a5203ee3de7a74ce2b3fbe37f634&amp;returnUrl=https%3a%2f%2fpp-login.apprenticeships.education.gov.uk%2fidentity%2fconnect%2fauthorize%3fclient_id%3dreservationspp%26redirect_uri%3dhttps%253A%252F%252Fsecurefunding.pp-eas.apprenticeships.education.gov.uk%252Fsignin-oidc%26response_type%3dcode%26scope%3dopenid%2520profile%26response_mode%3dform_post%26nonce%3d637014760788786931.NWU1YzljZmQtZmE4My00NDA3LWE1NWQtYjI4OTIzNWZiZGY3NTYyYjU0OGEtZTBlZi00ZDMyLTg5ZjYtNTdmMjFkNTY5MmUw%26state%3dCfDJ8EnILmW4Y-BJqXp_qKg39wL_vu0OJhYbX_Tq0ikj4AicKthL6xBhAYLwXS26qREknIetlC3pJ6x9sqCFEOCWfb-n8WRw4VoDGeUYTeweGB4e4JqKzIw44y_jClnbRvsWoqMq7TRAeqLTjnHBMAfshd-LQTXCPB_2J-8TSyBOECgtti0kppR2aaSz85sAlg-BeVn0Ymu6qN10cCvCEVTR53e5M9N58xi9S6iVkh9aGlJ3FFIT2_ZIlVDCABneBA3SKhbmhCRBgh2Pulxi-8sDfgKuVK_-Ei0dc8r7DDFMr07ef45Iy2wD-Qet0R8USZKbcGwyaBqTe8VxMMMNrBVmR-H45_TkcHQNWEuJMFKY5946oFSEoW8rdahLxsFIA58MRLwS7WTJt4cu4A8V9irwB9caJNLGQaL4-8GaQygM5Ls_8mDjRDxrvT9fCP2ZHk-ZAg%26x-client-SKU%3dID_NETSTANDARD2_0%26x-client-ver%3d5.3.0.0&amp;clientId=reservationspp" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/logout?id=cd2c8988f295abfccf4a263392fcd865" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="121a67dd-9fc3-4fe2-be7b-280cf86c48bc" Version="1.1" Url="https://pp-reporting.apprenticeships.education.gov.uk/signoutcleanup" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pp-login.apprenticeships.education.gov.uk/identity/employer/login?id=94987cea646da6cf00be76fde7071bcb&amp;returnUrl=https%3a%2f%2fpp-login.apprenticeships.education.gov.uk%2fidentity%2fconnect%2fauthorize%3fclient_id%3dpsreppp%26redirect_uri%3dhttps%253A%252F%252Fpp-reporting.apprenticeships.education.gov.uk%252Fsignin-oidc%26response_type%3dcode%26scope%3dopenid%2520profile%26response_mode%3dform_post%26nonce%3d637014760788528432.M2I2YzU3YmItMzA3ZS00NDA1LTlhYzEtOGJjYWE2YmY1OTNjMzg1M2VkMTItYjllNC00Y2ZjLTk2NjAtMWRmMmNhZmU2NTZl%26state%3dCfDJ8A7OPyttC-xGk9pqfTHFDZC8BkUG_pNiY18IVgfKb628M9rqbvplEsQTda5yqzpk14Y36UUnwqn2-7eIG51_atFNyydEepkZX-5AcnOmzf-cO9aU0p3_UHNYyrmOGOJEDtQTLGWkhI9f4rM7vijHjL9ipRT_502ir3dtibjEKvxkUNFjOHvbGPJlyrYDEvCA5jKAJY1Xh-aagobW0-Dx0hqurFu5ZomRdVtrky3j0lckdPMV6tjFAKQPdhmolmzgHHsKWYJeD9y0xe5kE7HRqz6SJxgCmDBZzAlQ1FC7zDXWqD5Q1wulqzw5HXsluQsaGKgWYnxYZHuU2a4FH18w1L8kE-TNOs5kr6K5zb6RZsH1H-rRraPUqTp7B0Vtzm0fcEScBc9d3zZsslbnuZ5NlXF7wMBRZrgsQuWJ6RhZ3hPy%26x-client-SKU%3dID_NET%26x-client-ver%3d2.1.4.0&amp;clientId=psreppp" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/logout?id=cd2c8988f295abfccf4a263392fcd865" />
+          </Headers>
+        </Request>
+        <Request Method="GET" Guid="029eeb51-8ebc-43fa-ada9-b81f8b3a1b29" Version="1.1" Url="https://accounts.pp-eas.apprenticeships.education.gov.uk/service/signoutcleanup" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/logout?id=cd2c8988f295abfccf4a263392fcd865" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+    <Request Method="GET" Guid="bfbdeecb-36e7-4568-8ab2-964cc5800336" Version="1.1" Url="https://finance.pp-eas.apprenticeships.education.gov.uk/service/signoutcleanup" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/logout?id=cd2c8988f295abfccf4a263392fcd865" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="6c352e20-0088-4cd0-8e94-62af98a3e7ee" Version="1.1" Url="https://forecasting.pp-eas.apprenticeships.education.gov.uk/" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/logout?id=cd2c8988f295abfccf4a263392fcd865" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="0bf8f6a1-886a-495f-ab58-8ea8d35de847" Version="1.1" Url="https://permissions.pp-eas.apprenticeships.education.gov.uk/signoutcleanup" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/logout?id=cd2c8988f295abfccf4a263392fcd865" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="7c8daef0-d604-4f02-aae6-bb5f7ad71487" Version="1.1" Url="https://recruit.pp-eas.apprenticeships.education.gov.uk/signout-oidc" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/logout?id=cd2c8988f295abfccf4a263392fcd865" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="4533de51-40ba-4c3c-b479-76c821b0223a" Version="1.1" Url="https://pp-selections.apprenticeships.education.gov.uk/" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pp-login.apprenticeships.education.gov.uk/identity/employer/login?id=7a7433cb264a46d2f1b7ef1d67d351a5&amp;returnUrl=https%3a%2f%2fpp-login.apprenticeships.education.gov.uk%2fidentity%2fconnect%2fauthorize%3fclient_id%3dempfav%26redirect_uri%3dhttps%253A%252F%252Fpp-selections.apprenticeships.education.gov.uk%252Fsignin-oidc%26response_type%3dcode%26scope%3dopenid%2520profile%26response_mode%3dform_post%26nonce%3d637014760829168209.YmVkOTJiYmEtZTU1MC00Y2Y2LTk5YTQtZDYwY2Q0YWQ5N2JhMGFhYjNiZmQtYjlmMi00NzkzLTk5OWItY2Y4NDU2ODUyYTlh%26state%3dCfDJ8OSnSycIn6lCiwd5HwKpI7uH5a8OVXZlCqfgYwa4h3FAn9TuSiRt8Vb_L8cC06iirDKP8sgyUFnefS-svRKNbt7bi57nI0Sjom4YgokugKUOt7Q43F4RuEbRWRkpEqcVUF7LS9xtdVpCGRwoIeaWhhOBm2RO74wznaKBZ4HN_Nv2QWxY2tNJybEze9wAzupfpgZtPVaTZ2Gcgvb4wnS3l6oWzHsO3-3Mu-5tPOhZW23Q1ahvTDQAHk5JKooC-8j6qsZ2Gwb0pnISN1t37OOLPivSVX9gdWYP3q4D8ddyZPcl0aqGBhPyEwc9VPIsKKG-jAprc2JLacY1_VosLJShV_8inh3PPW4uP_N61lUWuPNzgl0rfATGFymiS0xpJ3uBNpTWauCalcSgdeEtg3OnUnUlGdXIloHcaHa3JU1rONVP%26x-client-SKU%3dID_NETSTANDARD2_0%26x-client-ver%3d5.3.0.0&amp;clientId=empfav" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/logout?id=cd2c8988f295abfccf4a263392fcd865" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="f05945b2-cb43-43c9-8356-64908ef29de3" Version="1.1" Url="https://pp-reporting.apprenticeships.education.gov.uk/signoutcleanup" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pp-login.apprenticeships.education.gov.uk/identity/employer/login?id=f682a56b1d11d9166dd4a209d5182518&amp;returnUrl=https%3a%2f%2fpp-login.apprenticeships.education.gov.uk%2fidentity%2fconnect%2fauthorize%3fclient_id%3dpsreppp%26redirect_uri%3dhttps%253A%252F%252Fpp-reporting.apprenticeships.education.gov.uk%252Fsignin-oidc%26response_type%3dcode%26scope%3dopenid%2520profile%26response_mode%3dform_post%26nonce%3d637014760829372099.MmE0YTQ2OTAtZjAwNi00M2U3LTk1OTQtZDRkYjNiYTM5ZWU5N2YyY2JkODAtYTY3OC00NWViLWExZjYtMWMwODUzYTRiN2Nk%26state%3dCfDJ8A7OPyttC-xGk9pqfTHFDZDx7Ev3BgWjYk-l7jSofUY4Y_pkAaycryIUmW7Ch9SKhacozWo00mJlG4hbSTJkFsjcXTyqRKdSdOqiFMKXojYAytJeO30_U3wHb8e1GCxOhiPdTG384goqb331XnlgdtJcqY4-Gl4CCH8fsCoQadNv-cFMyuAfSbOZ56bdbfcnPSLt84tcH7q2Vh48VrNfjYyhrvzfDtA3qKVGDSv5-eFIC4zOjvbSzLkiyA3DkAxpjlUFBl9GW9IRX7aprZpOL_sITQowKEq3Wjmi7ANPIrPTVCeUVvxNb9DsS8512UscnyrWfxekkwvyGXdQ-fNK3blSL2W0yCnLTPD0jnMKUl3bQUxeWy36hvbnR1rAc-JFFkW0SCn5_HL1oyS0hHaRYtCx_JYevHWSZHv8fRB-AXyA%26x-client-SKU%3dID_NET%26x-client-ver%3d2.1.4.0&amp;clientId=psreppp" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/logout?id=cd2c8988f295abfccf4a263392fcd865" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="cd18f53c-c42e-490d-9216-c077bb025b93" Version="1.1" Url="https://securefunding.pp-eas.apprenticeships.education.gov.uk/signoutcleanup" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://pp-login.apprenticeships.education.gov.uk/identity/employer/login?id=ac9d6515af8ecee2298d89e9d83c54b9&amp;returnUrl=https%3a%2f%2fpp-login.apprenticeships.education.gov.uk%2fidentity%2fconnect%2fauthorize%3fclient_id%3dreservationspp%26redirect_uri%3dhttps%253A%252F%252Fsecurefunding.pp-eas.apprenticeships.education.gov.uk%252Fsignin-oidc%26response_type%3dcode%26scope%3dopenid%2520profile%26response_mode%3dform_post%26nonce%3d637014760829718948.ZTJiMWUxMWQtNTIzZC00YzgxLWJhZjEtN2VlZTc3OTdmZGJjMjZiMTAxYzUtZGRhNy00MmNjLWE3NTAtMWViOWUwYjU5Nzli%26state%3dCfDJ8EnILmW4Y-BJqXp_qKg39wI9WJFzpgeg6blF-FIrBiVRCOHcm9gD5XdBxQceO4cDEuiHt1JMUZXwSmp2QiKIKsjb4f_ZpeCD0qpdrGOiodOBkUM1_MVkIOIfQ4VJW14onmlOAzeIa6ERX140WlxpT87mHxV75EvohMHFKcMycillvoaKrhnkWXAhB6qCRbtBGasfYM0yZmNpMMJah2e5sf7WGM-mXjeyyxVd4H1LZZGV1uUvVrkWfEjjwxaAE_1NB5Qbcmc7jqSi-r51fTy32eiUHpa3KezeAEjsh0-P8Va9rZWAMlAYKDnBFhZza5Ch9oWbeHMj4mCwZB_0OCXOSCOBCmuV2W6QBEdqK8w-oX0VlASLFKG3rw1_e3L6r7HZyyeW04UqvvCIcLsvmtiLcpr1hmEDJJGLG1iqZo-69MHI0mxbmDIvCcJ1_2MffHNcKw%26x-client-SKU%3dID_NETSTANDARD2_0%26x-client-ver%3d5.3.0.0&amp;clientId=reservationspp" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/logout?id=cd2c8988f295abfccf4a263392fcd865" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="96d44bb9-b6bf-4388-972a-2d9fff440408" Version="1.1" Url="https://pp-login.apprenticeships.education.gov.uk/identity/logout" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://accounts.pp-eas.apprenticeships.education.gov.uk/accounts/9GG4GN/teams" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="id" Value="cd2c8988f295abfccf4a263392fcd865" RecordedValue="cd2c8988f295abfccf4a263392fcd865" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="49a76bfe-9d2a-447b-ba95-4f60c4a0d157" Version="1.1" Url="https://forecasting.pp-eas.apprenticeships.education.gov.uk/" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/logout?id=cd2c8988f295abfccf4a263392fcd865" />
+      </Headers>
+    </Request>
+    <Request Method="GET" Guid="93882289-96cf-4507-8ed3-8c74c810b953" Version="1.1" Url="https://permissions.pp-eas.apprenticeships.education.gov.uk/signoutcleanup" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/logout?id=cd2c8988f295abfccf4a263392fcd865" />
+      </Headers>
+    </Request>
+    <Comment CommentText="SCRIPT STEP 16 - LOGGED OUT PAGE - SELECT CONTINUE BUTTON" />
+    <TransactionTimer Name="S01_06_T16_LOGGED_OUT_PAGE_SELECT_CONTINUE_BUTTON">
+      <Items>
+        <Request Method="GET" Guid="ebe6931a-526b-4a4a-9c48-5e5179a89282" Version="1.1" Url="https://pp-eas.apprenticeships.education.gov.uk/" ThinkTime="5" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="https://accounts.pp-eas.apprenticeships.education.gov.uk/service/index" ReportingName="" IgnoreHttpStatusCode="False">
+          <Headers>
+            <Header Name="Referer" Value="https://pp-login.apprenticeships.education.gov.uk/identity/logout?id=cd2c8988f295abfccf4a263392fcd865" />
+          </Headers>
+        </Request>
+      </Items>
+    </TransactionTimer>
+  </Items>
+  <DataSources>
+    <DataSource Name="DataSource13" Provider="Microsoft.VisualStudio.TestTools.DataSource.CSV" Connection="C:\ESFA_DAS_QA_LOADTEST_TEST_DATA_FILES\DAS_QA_LOADTEST_TEST_DATA_FILE_013.csv">
+      <Tables>
+        <DataSourceTable Name="DAS_QA_LOADTEST_TEST_DATA_FILE_013#csv" SelectColumns="SelectAllColumns" AccessMethod="DoNotMoveCursor" />
+      </Tables>
+    </DataSource>
+    <DataSource Name="DataSource11" Provider="Microsoft.VisualStudio.TestTools.DataSource.CSV" Connection="C:\ESFA_DAS_QA_LOADTEST_TEST_DATA_FILES\DAS_QA_LOADTEST_TEST_DATA_FILE_011.csv">
+      <Tables>
+        <DataSourceTable Name="DAS_QA_LOADTEST_TEST_DATA_FILE_011#csv" SelectColumns="SelectAllColumns" AccessMethod="DoNotMoveCursor" />
+      </Tables>
+    </DataSource>
+    <DataSource Name="DataSource10" Provider="Microsoft.VisualStudio.TestTools.DataSource.CSV" Connection="C:\ESFA_DAS_QA_LOADTEST_TEST_DATA_FILES\DAS_QA_LOADTEST_TEST_DATA_FILE_010.csv">
+      <Tables>
+        <DataSourceTable Name="DAS_QA_LOADTEST_TEST_DATA_FILE_010#csv" SelectColumns="SelectAllColumns" AccessMethod="DoNotMoveCursor" />
+      </Tables>
+    </DataSource>
+    <DataSource Name="DataSource03" Provider="Microsoft.VisualStudio.TestTools.DataSource.CSV" Connection="C:\ESFA_DAS_QA_LOADTEST_TEST_DATA_FILES\DAS_QA_LOADTEST_TEST_DATA_FILE_003.csv">
+      <Tables>
+        <DataSourceTable Name="DAS_QA_LOADTEST_TEST_DATA_FILE_003#csv" SelectColumns="SelectAllColumns" AccessMethod="Sequential" />
+      </Tables>
+    </DataSource>
+  </DataSources>
+  <ContextParameters>
+    <ContextParameter Name="LastName" Value="" />
+    <ContextParameter Name="Email" Value="" />
+  </ContextParameters>
+  <WebTestPlugins>
+    <WebTestPlugin Classname="ESFA.DAS.QA.LOADTEST.PLUGINS.GenerateUniqueLastName, ESFA.DAS.QA.LOADTEST.PROJECT.008.PLUGINS.PROD, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="Generate Unique Last Name" Description="Generates a unique last name with every iteration">
+      <RuleParameters>
+        <RuleParameter Name="ContextParamTarget" Value="Lastname" />
+      </RuleParameters>
+    </WebTestPlugin>
+    <WebTestPlugin Classname="ESFA.DAS.QA.LOADTEST.PLUGINS.GenerateUniqueEmail, ESFA.DAS.QA.LOADTEST.PROJECT.008.PLUGINS.PROD, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="Generate Unique Email" Description="Generates a unique for the new user">
+      <RuleParameters>
+        <RuleParameter Name="ContextParamTarget" Value="Email" />
+      </RuleParameters>
+    </WebTestPlugin>
+    <WebTestPlugin Classname="ESFA.DAS.QA.LOADTEST.PLUGINS.UpdatePayeRemovedDate, ESFA.DAS.QA.LOADTEST.PROJECT.008.PLUGINS.PROD, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" DisplayName="Update PAYE Removed Date" Description="This plugin updates the PAYE Scheme Removed Date in the Database from NULL to Current DateTime as a Test Data Prerequisite for the Test Script to run">
+      <RuleParameters>
+        <RuleParameter Name="PayeSchemeDataFile" Value="DataSource03.DAS_QA_LOADTEST_TEST_DATA_FILE_003#csv.GATEWAY_PAYESCHEME" />
+        <RuleParameter Name="DBConnectionDataFile" Value="DataSource13.DAS_QA_LOADTEST_TEST_DATA_FILE_013#csv.DBConnectionString" />
+      </RuleParameters>
+    </WebTestPlugin>
+  </WebTestPlugins>
+</WebTest>
